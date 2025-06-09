@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Github, Linkedin, Mail, Phone, Download, ExternalLink, Award, Send, User, MapPin, MessageSquare } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, Phone, Download, ExternalLink, Award, Send, User, MapPin, MessageSquare, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -12,6 +12,7 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isVisible, setIsVisible] = useState({});
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [typewriterText, setTypewriterText] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,6 +20,22 @@ const Index = () => {
     message: ''
   });
   const { toast } = useToast();
+
+  const fullText = "Data Analysis Engineer & Full-Stack Developer";
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= fullText.length) {
+        setTypewriterText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -217,9 +234,12 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-lg z-50 border-b border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Abhijnya K.G
-            </h1>
+            <div className="flex items-center space-x-3">
+              <Database className="w-8 h-8 text-blue-400" />
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Data Portfolio
+              </span>
+            </div>
             <div className="hidden md:flex space-x-8 lg:space-x-10">
               {['Home', 'About', 'Education', 'Experience', 'Skills', 'Certifications', 'Projects', 'Contact'].map((item) => (
                 <button
@@ -239,7 +259,7 @@ const Index = () => {
 
       {/* Enhanced Interactive Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Interactive Animated Background */}
+        {/* Enhanced Interactive Animated Background */}
         <div className="absolute inset-0 interactive-bg">
           <div 
             className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float transition-all duration-300"
@@ -266,9 +286,9 @@ const Index = () => {
             }}
           ></div>
           
-          {/* Interactive Particles */}
+          {/* Enhanced Interactive Particles */}
           <div className="absolute inset-0">
-            {[...Array(20)].map((_, i) => (
+            {[...Array(30)].map((_, i) => (
               <div
                 key={i}
                 className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-pulse"
@@ -281,12 +301,21 @@ const Index = () => {
               ></div>
             ))}
           </div>
+
+          {/* Cursor Following Effect */}
+          <div 
+            className="absolute w-64 h-64 bg-gradient-to-r from-blue-400/5 to-purple-400/5 rounded-full blur-2xl pointer-events-none transition-all duration-300"
+            style={{
+              left: `${mousePosition.x - 128}px`,
+              top: `${mousePosition.y - 128}px`,
+            }}
+          ></div>
         </div>
 
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="animate-fade-in">
-            {/* Enhanced Profile Image */}
-            <div className="mb-12 flex justify-center">
+            {/* Enhanced Profile Image with proper spacing */}
+            <div className="mb-16 flex justify-center">
               <div className="relative group">
                 <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 p-1 animate-pulse-glow hover:scale-105 transition-transform duration-500">
                   <img 
@@ -301,7 +330,7 @@ const Index = () => {
               </div>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient typing-text">
                 Abhijnya
               </span>
@@ -309,23 +338,17 @@ const Index = () => {
               <span className="text-white animate-fade-in block mt-2" style={{animationDelay: '0.5s'}}>Konanduru Gurumurthy</span>
             </h1>
             
-            <div className="mb-10 space-y-6">
-              <p className="text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 font-bold mb-6 animate-fade-in" style={{animationDelay: '1s'}}>
-                Data Analysis Engineer & Full-Stack Developer
-              </p>
-              
-              <div className="space-y-4 max-w-4xl mx-auto">
-                <p className="text-lg md:text-xl text-yellow-400 font-semibold mb-4 animate-fade-in flex items-center justify-center gap-2" style={{animationDelay: '1.5s'}}>
-                  <Award className="w-6 h-6" />
-                  🏆 BRONZE STAR Awardee at Mercedes Benz
-                  <span className="mx-2">•</span>
-                  🎓 MS Computer Science @ Syracuse University
-                </p>
-                
-                <p className="text-base md:text-lg text-white/70 mb-6 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: '2s'}}>
-                  Transforming data into insights • Building scalable solutions with AI/ML • 99.9% data quality expert
-                </p>
+            <div className="mb-12 space-y-8">
+              <div className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 font-bold mb-8 animate-fade-in min-h-[3rem] flex items-center justify-center" style={{animationDelay: '1s'}}>
+                <span className="typewriter-text border-r-2 border-blue-400 pr-1">
+                  {typewriterText}
+                  {typewriterText.length < fullText.length && <span className="animate-pulse">|</span>}
+                </span>
               </div>
+              
+              <p className="text-base md:text-lg text-white/70 mb-6 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: '2s'}}>
+                Transforming data into insights • Building scalable solutions with AI/ML • 99.9% data quality expert
+              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fade-in" style={{animationDelay: '2.5s'}}>
@@ -577,11 +600,11 @@ const Index = () => {
             <div className="mb-16">
               <h3 className="text-3xl font-bold text-center mb-10 text-yellow-400">🏆 Awards & Achievements</h3>
               <div className="flex justify-center">
-                <Card className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-400/30 backdrop-blur-sm hover:from-yellow-500/20 hover:to-orange-500/20 transition-all duration-300 hover-scale">
+                <Card className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-400/50 backdrop-blur-sm hover:from-yellow-500/30 hover:to-orange-500/30 transition-all duration-300 hover-scale">
                   <CardContent className="p-8 text-center">
                     <Award className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
-                    <p className="text-white font-bold text-xl mb-2">{achievements[0]}</p>
-                    <p className="text-white/60 text-base">For driving customer-centric strategies and executing critical service enhancements</p>
+                    <p className="text-yellow-300 font-bold text-xl mb-2">BRONZE STAR Award - Mercedes Benz R&D (2023)</p>
+                    <p className="text-yellow-200/80 text-base">For driving customer-centric strategies and executing critical service enhancements</p>
                   </CardContent>
                 </Card>
               </div>
