@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Phone, Download, ExternalLink, Award, Send, User, MapPin, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isVisible, setIsVisible] = useState({});
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,8 +36,17 @@ const Index = () => {
       }
     };
 
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -122,6 +131,19 @@ const Index = () => {
 
   const projects = [
     {
+      title: "IoT Environmental Monitoring System",
+      period: "Feb 2025 - Apr 2025",
+      tech: ["Python", "MQTT", "ThingSpeak", "IoT", "Cloud Computing"],
+      description: "Developed an IoT-based environmental monitoring system that simulates real-time temperature, humidity, and CO2 sensors using MQTT protocol and ThingSpeak for cloud-based data storage and visualization",
+      highlights: [
+        "Virtual sensors for temperature, humidity, and CO2 levels",
+        "MQTT protocol for efficient data transmission", 
+        "ThingSpeak cloud platform for data storage and visualization",
+        "Real-time sensor data retrieval and historical data analysis"
+      ],
+      link: "https://github.com/Abhijnya002/IOT-project"
+    },
+    {
       title: "AI-Powered Data Extraction & Structuring",
       period: "Jan 2025 - April 2025",
       tech: ["Python", "Pandas", "OpenPyXL", "Regex", "NLP"],
@@ -191,20 +213,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 border-b border-white/10">
+      {/* Enhanced Navigation */}
+      <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-lg z-50 border-b border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Abhijnya K.G
             </h1>
-            <div className="hidden md:flex space-x-6 lg:space-x-8">
-              {['Home', 'About', 'Education', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
+            <div className="hidden md:flex space-x-8 lg:space-x-10">
+              {['Home', 'About', 'Education', 'Experience', 'Skills', 'Certifications', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`transition-all duration-300 hover:text-blue-400 hover:scale-105 text-sm lg:text-base ${
-                    activeSection === item.toLowerCase() ? 'text-blue-400 font-semibold' : 'text-white/80'
+                  className={`transition-all duration-300 hover:text-blue-400 hover:scale-105 text-sm lg:text-base nav-link ${
+                    activeSection === item.toLowerCase() ? 'text-blue-400 font-semibold active' : 'text-white/80'
                   }`}
                 >
                   {item}
@@ -215,78 +237,126 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Enhanced Hero Section */}
+      {/* Enhanced Interactive Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+        {/* Interactive Animated Background */}
+        <div className="absolute inset-0 interactive-bg">
+          <div 
+            className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float transition-all duration-300"
+            style={{
+              left: `${mousePosition.x * 0.02}px`,
+              top: `${mousePosition.y * 0.02}px`,
+            }}
+          ></div>
+          <div 
+            className="absolute w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float transition-all duration-500"
+            style={{
+              right: `${mousePosition.x * 0.01}px`,
+              bottom: `${mousePosition.y * 0.01}px`,
+              animationDelay: '1s'
+            }}
+          ></div>
+          <div 
+            className="absolute w-72 h-72 bg-pink-500/10 rounded-full blur-3xl animate-float transition-all duration-700"
+            style={{
+              left: `50%`,
+              top: `50%`,
+              transform: `translate(-50%, -50%) translate(${mousePosition.x * 0.005}px, ${mousePosition.y * 0.005}px)`,
+              animationDelay: '2s'
+            }}
+          ></div>
+          
+          {/* Interactive Particles */}
+          <div className="absolute inset-0">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 2}s`,
+                  transform: `translate(${mousePosition.x * 0.001}px, ${mousePosition.y * 0.001}px)`
+                }}
+              ></div>
+            ))}
+          </div>
         </div>
 
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="animate-fade-in">
-            {/* Profile Image */}
-            <div className="mb-8 flex justify-center">
-              <div className="relative">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 p-1 animate-pulse-glow">
-                  <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-                    <User className="w-16 h-16 md:w-20 md:h-20 text-white/60" />
-                  </div>
+            {/* Enhanced Profile Image */}
+            <div className="mb-12 flex justify-center">
+              <div className="relative group">
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 p-1 animate-pulse-glow hover:scale-105 transition-transform duration-500">
+                  <img 
+                    src="/lovable-uploads/d49c34b6-cc41-4935-811a-e22ba5b345df.png"
+                    alt="Abhijnya Konanduru Gurumurthy"
+                    className="w-full h-full rounded-full object-cover"
+                  />
                 </div>
-                <div className="absolute -bottom-2 -right-2 bg-green-500 w-8 h-8 rounded-full border-4 border-slate-900 animate-pulse"></div>
+                <div className="absolute -bottom-3 -right-3 bg-green-500 w-10 h-10 rounded-full border-4 border-slate-900 animate-pulse flex items-center justify-center">
+                  <span className="text-xs font-bold">🟢</span>
+                </div>
               </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient typing-text">
                 Abhijnya
               </span>
               <br />
-              <span className="text-white animate-fade-in" style={{animationDelay: '0.5s'}}>Konanduru Gurumurthy</span>
+              <span className="text-white animate-fade-in block mt-2" style={{animationDelay: '0.5s'}}>Konanduru Gurumurthy</span>
             </h1>
             
-            <div className="mb-8">
-              <p className="text-xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 font-semibold mb-4 animate-fade-in" style={{animationDelay: '1s'}}>
+            <div className="mb-10 space-y-6">
+              <p className="text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 font-bold mb-6 animate-fade-in" style={{animationDelay: '1s'}}>
                 Data Analysis Engineer & Full-Stack Developer
               </p>
-              <p className="text-lg md:text-xl text-white/80 mb-4 max-w-3xl mx-auto animate-fade-in" style={{animationDelay: '1.5s'}}>
-                🏆 BRONZE STAR Awardee at Mercedes Benz • 🎓 MS Computer Science @ Syracuse University
-              </p>
-              <p className="text-base md:text-lg text-white/60 mb-12 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '2s'}}>
-                Transforming data into insights • Building scalable solutions with AI/ML • 99.9% data quality expert
-              </p>
+              
+              <div className="space-y-4 max-w-4xl mx-auto">
+                <p className="text-lg md:text-xl text-yellow-400 font-semibold mb-4 animate-fade-in flex items-center justify-center gap-2" style={{animationDelay: '1.5s'}}>
+                  <Award className="w-6 h-6" />
+                  🏆 BRONZE STAR Awardee at Mercedes Benz
+                  <span className="mx-2">•</span>
+                  🎓 MS Computer Science @ Syracuse University
+                </p>
+                
+                <p className="text-base md:text-lg text-white/70 mb-6 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: '2s'}}>
+                  Transforming data into insights • Building scalable solutions with AI/ML • 99.9% data quality expert
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in" style={{animationDelay: '2.5s'}}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fade-in" style={{animationDelay: '2.5s'}}>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 text-lg hover-scale group"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-10 py-4 text-lg hover-scale group btn-ripple"
               >
                 <MessageSquare className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
                 Get In Touch
               </Button>
               <Button 
                 variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg hover-scale group"
+                className="border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 px-10 py-4 text-lg hover-scale group btn-ripple bg-white/5 backdrop-blur-sm"
               >
                 <Download className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
                 Download Resume
               </Button>
             </div>
 
-            <div className="flex justify-center space-x-6 animate-fade-in" style={{animationDelay: '3s'}}>
-              <a href="mailto:abhijnyakg@gmail.com" className="text-white/60 hover:text-blue-400 transition-all duration-300 hover:scale-125">
-                <Mail className="w-6 h-6" />
+            <div className="flex justify-center space-x-8 animate-fade-in" style={{animationDelay: '3s'}}>
+              <a href="mailto:abhijnyakg@gmail.com" className="text-white/60 hover:text-blue-400 transition-all duration-300 hover:scale-150 hover-glow">
+                <Mail className="w-7 h-7" />
               </a>
-              <a href="tel:315-374-0966" className="text-white/60 hover:text-green-400 transition-all duration-300 hover:scale-125">
-                <Phone className="w-6 h-6" />
+              <a href="tel:315-374-0966" className="text-white/60 hover:text-green-400 transition-all duration-300 hover:scale-150 hover-glow">
+                <Phone className="w-7 h-7" />
               </a>
-              <a href="https://linkedin.com/in/abhijnyakg" className="text-white/60 hover:text-blue-400 transition-all duration-300 hover:scale-125">
-                <Linkedin className="w-6 h-6" />
+              <a href="https://linkedin.com/in/abhijnyakg" className="text-white/60 hover:text-blue-400 transition-all duration-300 hover:scale-150 hover-glow">
+                <Linkedin className="w-7 h-7" />
               </a>
-              <a href="https://github.com/Abhijnya002" className="text-white/60 hover:text-purple-400 transition-all duration-300 hover:scale-125">
-                <Github className="w-6 h-6" />
+              <a href="https://github.com/Abhijnya002" className="text-white/60 hover:text-purple-400 transition-all duration-300 hover:scale-150 hover-glow">
+                <Github className="w-7 h-7" />
               </a>
             </div>
           </div>
@@ -298,7 +368,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-black/20">
+      <section id="about" className="py-24 bg-black/20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             About Me
@@ -309,7 +379,11 @@ const Index = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-8">
                   <div className="flex-shrink-0">
                     <div className="w-48 h-48 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-400/20 flex items-center justify-center">
-                      <User className="w-24 h-24 text-white/60" />
+                      <img 
+                        src="/lovable-uploads/d49c34b6-cc41-4935-811a-e22ba5b345df.png"
+                        alt="Abhijnya Konanduru Gurumurthy"
+                        className="w-full h-full rounded-xl object-cover"
+                      />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -320,14 +394,15 @@ const Index = () => {
                     </p>
                     <p className="text-lg text-white/80 leading-relaxed mb-6">
                       With a proven track record of enhancing project efficiency by 30% and achieving 99.9% data quality, 
-                      I combine technical expertise with strategic thinking to deliver innovative solutions.
+                      I combine technical expertise with strategic thinking to deliver innovative solutions. I was honored with the 
+                      <span className="text-yellow-400 font-semibold"> BRONZE STAR Award</span> at Mercedes Benz for driving customer-centric strategies.
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <div className="flex items-center text-blue-400">
                         <MapPin className="w-4 h-4 mr-2" />
                         Syracuse, NY
                       </div>
-                      <div className="flex items-center text-green-400">
+                      <div className="flex items-center text-yellow-400">
                         <Award className="w-4 h-4 mr-2" />
                         BRONZE STAR Awardee
                       </div>
@@ -341,7 +416,7 @@ const Index = () => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20">
+      <section id="education" className="py-24">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Academic Credentials
@@ -383,7 +458,7 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-black/20">
+      <section id="experience" className="py-24 bg-black/20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Work Experience
@@ -418,7 +493,7 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20">
+      <section id="skills" className="py-24">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Skills & Expertise
@@ -493,33 +568,33 @@ const Index = () => {
       </section>
 
       {/* Certifications & Achievements Section */}
-      <section id="certifications" className="py-20 bg-black/20">
+      <section id="certifications" className="py-24 bg-black/20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Certifications & Achievements
           </h2>
           <div className="max-w-6xl mx-auto">
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-center mb-8 text-yellow-400">🏆 Awards & Achievements</h3>
+            <div className="mb-16">
+              <h3 className="text-3xl font-bold text-center mb-10 text-yellow-400">🏆 Awards & Achievements</h3>
               <div className="flex justify-center">
                 <Card className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-400/30 backdrop-blur-sm hover:from-yellow-500/20 hover:to-orange-500/20 transition-all duration-300 hover-scale">
-                  <CardContent className="p-6 text-center">
-                    <Award className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-                    <p className="text-white font-semibold text-lg">{achievements[0]}</p>
-                    <p className="text-white/60 text-sm mt-2">For driving customer-centric strategies and executing critical service enhancements</p>
+                  <CardContent className="p-8 text-center">
+                    <Award className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
+                    <p className="text-white font-bold text-xl mb-2">{achievements[0]}</p>
+                    <p className="text-white/60 text-base">For driving customer-centric strategies and executing critical service enhancements</p>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-center mb-8 text-blue-400">📜 Professional Certifications</h3>
-              <div className="grid md:grid-cols-3 gap-6">
+              <h3 className="text-3xl font-bold text-center mb-10 text-blue-400">📜 Professional Certifications</h3>
+              <div className="grid md:grid-cols-3 gap-8">
                 {certifications.map((cert, index) => (
                   <Card key={index} className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-center hover-scale">
-                    <CardContent className="p-6">
-                      <div className="text-4xl mb-4">🏆</div>
-                      <p className="text-white font-semibold">{cert}</p>
+                    <CardContent className="p-8">
+                      <div className="text-5xl mb-6">🏆</div>
+                      <p className="text-white font-semibold text-lg">{cert}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -530,7 +605,7 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-24">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Featured Projects
@@ -544,7 +619,9 @@ const Index = () => {
                       {project.title}
                     </h3>
                     {project.link && (
-                      <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-blue-400 transition-colors cursor-pointer" />
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-blue-400 transition-colors cursor-pointer" />
+                      </a>
                     )}
                   </div>
                   <p className="text-white/60 text-sm mb-4">{project.period}</p>
@@ -572,7 +649,7 @@ const Index = () => {
       </section>
 
       {/* Enhanced Contact Section */}
-      <section id="contact" className="py-20 bg-black/20">
+      <section id="contact" className="py-24 bg-black/20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Get In Touch

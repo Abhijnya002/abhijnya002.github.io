@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,7 +96,7 @@
   }
 }
 
-/* Enhanced animations for portfolio */
+/* Enhanced animations for interactive portfolio */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -120,10 +119,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
   }
   50% {
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 60px rgba(59, 130, 246, 0.8);
   }
 }
 
@@ -221,6 +220,30 @@
   50% { border-color: white }
 }
 
+@keyframes interactive-particle {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes magnetic-pull {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Animation classes */
 .animate-fade-in {
   animation: fade-in 1s ease-out;
 }
@@ -262,27 +285,35 @@
   animation: bounce-in 0.8s ease-out;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+.animate-interactive-particle {
+  animation: interactive-particle 4s ease-in-out infinite;
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+.animate-magnetic {
+  animation: magnetic-pull 0.6s ease-in-out;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(59, 130, 246, 0.5);
-  border-radius: 4px;
+/* Interactive background animations */
+.interactive-bg {
+  position: relative;
+  overflow: hidden;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(59, 130, 246, 0.7);
+.interactive-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
-/* Smooth transitions for all interactive elements */
-* {
-  transition: all 0.3s ease;
+.interactive-bg:hover::before {
+  opacity: 1;
 }
 
 /* Enhanced hover effects */
@@ -292,11 +323,12 @@
 
 .hover-scale:hover {
   transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  filter: brightness(1.2);
 }
 
 .hover-rotate:hover {
@@ -376,16 +408,6 @@
   width: 100%;
 }
 
-/* Form animations */
-.form-input {
-  transition: all 0.3s ease;
-}
-
-.form-input:focus {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-}
-
 /* Button ripple effect */
 .btn-ripple {
   position: relative;
@@ -413,34 +435,61 @@
 /* Typing animation */
 .typing-text {
   overflow: hidden;
-  border-right: 2px solid white;
+  border-right: 2px solid transparent;
   white-space: nowrap;
   margin: 0 auto;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end);
 }
 
-/* Loading animation */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+/* Enhanced button styles for better visibility */
+button[class*="bg-gradient"] {
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.animate-spin {
-  animation: spin 1s linear infinite;
+button[variant="outline"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
 }
 
-/* Parallax effect */
-.parallax {
-  transform: translateZ(0);
-  will-change: transform;
+button[variant="outline"]:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.3s ease;
 }
 
 /* Glass morphism effect */
 .glass {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -463,11 +512,15 @@
   .nav-link::after {
     display: none;
   }
+  
+  .interactive-bg::before {
+    display: none;
+  }
 }
 
 /* Dark mode specific animations */
 .dark .hover-scale:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
 }
 
 /* Accessibility improvements */
@@ -483,4 +536,47 @@
 .focus-visible:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
+}
+
+/* Magnetic effect for interactive elements */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic:hover {
+  transform: scale(1.05);
+}
+
+/* Parallax scrolling effect */
+.parallax {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Enhanced card interactions */
+.card-interactive {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-interactive:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.card-interactive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.card-interactive:hover::before {
+  opacity: 1;
 }
