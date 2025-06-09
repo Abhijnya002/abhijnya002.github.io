@@ -258,7 +258,7 @@ const Index = () => {
       </nav>
 
       {/* Enhanced Interactive Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-36">
         {/* Professional Interactive Animated Background */}
         <div className="absolute inset-0 interactive-bg professional-bg">
           {/* Dynamic gradient orbs that follow cursor */}
