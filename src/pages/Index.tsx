@@ -114,6 +114,7 @@ const Index = () => {
       company: "Mercedes Benz Research and Development",
       location: "Bangalore, India",
       period: "Aug 2022 – Aug 2024",
+      logo: "/lovable-uploads/5bfc4c68-6bde-4581-a163-25e04d5e12cc.png",
       highlights: [
         "Received BRONZE STAR award for driving customer-centric strategies, executing three critical service enhancements",
         "Enhanced project efficiency by 30% and accelerated delivery through Agile practices",
@@ -127,6 +128,7 @@ const Index = () => {
       company: "Mercedes Benz Research and Development",
       location: "Bangalore, India",
       period: "Mar 2022 – Jun 2022",
+      logo: "/lovable-uploads/5bfc4c68-6bde-4581-a163-25e04d5e12cc.png",
       highlights: [
         "Researched 5+ Static Code Analysis tools resulting in 60% improvement in code quality",
         "Evaluated Astree and Coverity tools with detailed analysis",
@@ -138,6 +140,7 @@ const Index = () => {
       company: "Samsung RD Institute",
       location: "Bangalore, India",
       period: "Nov 2020 – Apr 2021",
+      logo: "/lovable-uploads/e27680bc-0ffe-45c9-938a-177a5b5a7691.png",
       highlights: [
         "Implemented voice-enabled Literary Info Bixby capsule integrating REST APIs",
         "Established structured capsule serving as reference for 3+ project teams",
@@ -236,9 +239,6 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <Database className="w-8 h-8 text-blue-400" />
-              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Data Portfolio
-              </span>
             </div>
             <div className="hidden md:flex space-x-8 lg:space-x-10">
               {['Home', 'About', 'Education', 'Experience', 'Skills', 'Certifications', 'Projects', 'Contact'].map((item) => (
@@ -259,55 +259,68 @@ const Index = () => {
 
       {/* Enhanced Interactive Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Enhanced Interactive Animated Background */}
-        <div className="absolute inset-0 interactive-bg">
+        {/* Professional Interactive Animated Background */}
+        <div className="absolute inset-0 interactive-bg professional-bg">
+          {/* Dynamic gradient orbs that follow cursor */}
           <div 
-            className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float transition-all duration-300"
+            className="absolute w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-float transition-all duration-700 ease-out"
             style={{
-              left: `${mousePosition.x * 0.02}px`,
-              top: `${mousePosition.y * 0.02}px`,
+              left: `${20 + mousePosition.x * 0.01}%`,
+              top: `${30 + mousePosition.y * 0.015}%`,
+              transform: `scale(${1 + mousePosition.x * 0.0001})`
             }}
           ></div>
           <div 
-            className="absolute w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float transition-all duration-500"
+            className="absolute w-80 h-80 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl animate-float transition-all duration-500 ease-out"
             style={{
-              right: `${mousePosition.x * 0.01}px`,
-              bottom: `${mousePosition.y * 0.01}px`,
-              animationDelay: '1s'
+              right: `${15 + mousePosition.x * 0.008}%`,
+              bottom: `${25 + mousePosition.y * 0.012}%`,
+              animationDelay: '1s',
+              transform: `scale(${1 + mousePosition.y * 0.0001})`
             }}
           ></div>
           <div 
-            className="absolute w-72 h-72 bg-pink-500/10 rounded-full blur-3xl animate-float transition-all duration-700"
+            className="absolute w-72 h-72 bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-full blur-3xl animate-float transition-all duration-900 ease-out"
             style={{
-              left: `50%`,
-              top: `50%`,
-              transform: `translate(-50%, -50%) translate(${mousePosition.x * 0.005}px, ${mousePosition.y * 0.005}px)`,
+              left: `45%`,
+              top: `40%`,
+              transform: `translate(-50%, -50%) translate(${mousePosition.x * 0.003}px, ${mousePosition.y * 0.003}px) scale(${1 + (mousePosition.x + mousePosition.y) * 0.00005})`,
               animationDelay: '2s'
             }}
           ></div>
           
-          {/* Enhanced Interactive Particles */}
+          {/* Professional floating particles */}
           <div className="absolute inset-0">
-            {[...Array(30)].map((_, i) => (
+            {[...Array(25)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-pulse"
+                className="absolute w-1 h-1 bg-blue-400/30 rounded-full animate-pulse transition-all duration-300"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 2}s`,
-                  transform: `translate(${mousePosition.x * 0.001}px, ${mousePosition.y * 0.001}px)`
+                  animationDelay: `${Math.random() * 3}s`,
+                  transform: `translate(${mousePosition.x * 0.002}px, ${mousePosition.y * 0.002}px) scale(${1 + Math.sin(Date.now() * 0.001 + i) * 0.5})`
                 }}
               ></div>
             ))}
           </div>
 
-          {/* Cursor Following Effect */}
+          {/* Professional cursor-following gradient */}
           <div 
-            className="absolute w-64 h-64 bg-gradient-to-r from-blue-400/5 to-purple-400/5 rounded-full blur-2xl pointer-events-none transition-all duration-300"
+            className="absolute w-96 h-96 bg-gradient-to-r from-blue-400/8 via-purple-400/6 to-cyan-400/8 rounded-full blur-3xl pointer-events-none transition-all duration-300 ease-out"
             style={{
-              left: `${mousePosition.x - 128}px`,
-              top: `${mousePosition.y - 128}px`,
+              left: `${mousePosition.x - 192}px`,
+              top: `${mousePosition.y - 192}px`,
+              opacity: Math.min(1, (mousePosition.x + mousePosition.y) / 2000)
+            }}
+          ></div>
+
+          {/* Subtle grid pattern that responds to cursor */}
+          <div 
+            className="absolute inset-0 opacity-5 transition-opacity duration-500"
+            style={{
+              backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.3) 1px, transparent 1px)`,
+              backgroundSize: '50px 50px'
             }}
           ></div>
         </div>
@@ -339,7 +352,7 @@ const Index = () => {
             </h1>
             
             <div className="mb-12 space-y-8">
-              <div className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 font-bold mb-8 animate-fade-in min-h-[3rem] flex items-center justify-center" style={{animationDelay: '1s'}}>
+              <div className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 font-semibold mb-8 animate-fade-in min-h-[2.5rem] flex items-center justify-center" style={{animationDelay: '1s'}}>
                 <span className="typewriter-text border-r-2 border-blue-400 pr-1">
                   {typewriterText}
                   {typewriterText.length < fullText.length && <span className="animate-pulse">|</span>}
@@ -417,17 +430,12 @@ const Index = () => {
                     </p>
                     <p className="text-lg text-white/80 leading-relaxed mb-6">
                       With a proven track record of enhancing project efficiency by 30% and achieving 99.9% data quality, 
-                      I combine technical expertise with strategic thinking to deliver innovative solutions. I was honored with the 
-                      <span className="text-yellow-400 font-semibold"> BRONZE STAR Award</span> at Mercedes Benz for driving customer-centric strategies.
+                      I combine technical expertise with strategic thinking to deliver innovative solutions.
                     </p>
                     <div className="flex flex-wrap gap-4">
                       <div className="flex items-center text-blue-400">
                         <MapPin className="w-4 h-4 mr-2" />
                         Syracuse, NY
-                      </div>
-                      <div className="flex items-center text-yellow-400">
-                        <Award className="w-4 h-4 mr-2" />
-                        BRONZE STAR Awardee
                       </div>
                     </div>
                   </div>
@@ -448,10 +456,17 @@ const Index = () => {
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover-scale">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Master of Science (M.S), Computer Science</h3>
-                    <p className="text-blue-400 text-lg font-semibold">Syracuse University</p>
-                    <p className="text-white/60">Syracuse, NY</p>
+                  <div className="flex items-center gap-4">
+                    <img 
+                      src="/lovable-uploads/7dbca2d2-77d6-4c06-bd8c-24052363acfd.png"
+                      alt="Syracuse University"
+                      className="w-12 h-12 object-contain"
+                    />
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2">Master of Science (M.S), Computer Science</h3>
+                      <p className="text-blue-400 text-lg font-semibold">Syracuse University</p>
+                      <p className="text-white/60">Syracuse, NY</p>
+                    </div>
                   </div>
                   <div className="text-right">
                     <p className="text-white/80 font-semibold">Aug 2024 - May 2026</p>
@@ -464,10 +479,17 @@ const Index = () => {
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover-scale">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Bachelor of Engineering (B.E), Computer Science</h3>
-                    <p className="text-blue-400 text-lg font-semibold">BMS College of Engineering</p>
-                    <p className="text-white/60">Bangalore, India</p>
+                  <div className="flex items-center gap-4">
+                    <img 
+                      src="/lovable-uploads/2d405da3-82b6-4efc-aea7-e526dc00b6cc.png"
+                      alt="BMS College of Engineering"
+                      className="w-12 h-12 object-contain"
+                    />
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2">Bachelor of Engineering (B.E), Computer Science</h3>
+                      <p className="text-blue-400 text-lg font-semibold">BMS College of Engineering</p>
+                      <p className="text-white/60">Bangalore, India</p>
+                    </div>
                   </div>
                   <div className="text-right">
                     <p className="text-white/80 font-semibold">Aug 2018 - Jun 2022</p>
@@ -491,10 +513,17 @@ const Index = () => {
               <Card key={index} className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover-scale">
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row justify-between items-start mb-6">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
-                      <p className="text-blue-400 text-lg font-semibold">{exp.company}</p>
-                      <p className="text-white/60">{exp.location}</p>
+                    <div className="flex items-center gap-4">
+                      <img 
+                        src={exp.logo}
+                        alt={exp.company}
+                        className="w-12 h-12 object-contain"
+                      />
+                      <div>
+                        <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
+                        <p className="text-blue-400 text-lg font-semibold">{exp.company}</p>
+                        <p className="text-white/60">{exp.location}</p>
+                      </div>
                     </div>
                     <div className="text-right">
                       <p className="text-white/80 font-semibold">{exp.period}</p>
@@ -600,11 +629,11 @@ const Index = () => {
             <div className="mb-16">
               <h3 className="text-3xl font-bold text-center mb-10 text-yellow-400">🏆 Awards & Achievements</h3>
               <div className="flex justify-center">
-                <Card className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-400/50 backdrop-blur-sm hover:from-yellow-500/30 hover:to-orange-500/30 transition-all duration-300 hover-scale">
+                <Card className="bg-gradient-to-r from-yellow-900/40 to-orange-900/40 border-yellow-400/50 backdrop-blur-sm hover:from-yellow-900/60 hover:to-orange-900/60 transition-all duration-300 hover-scale">
                   <CardContent className="p-8 text-center">
                     <Award className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
-                    <p className="text-yellow-300 font-bold text-xl mb-2">BRONZE STAR Award - Mercedes Benz R&D (2023)</p>
-                    <p className="text-yellow-200/80 text-base">For driving customer-centric strategies and executing critical service enhancements</p>
+                    <p className="text-yellow-200 font-bold text-xl mb-2">BRONZE STAR Award - Mercedes Benz R&D (2023)</p>
+                    <p className="text-yellow-100/80 text-base">For driving customer-centric strategies and executing critical service enhancements</p>
                   </CardContent>
                 </Card>
               </div>

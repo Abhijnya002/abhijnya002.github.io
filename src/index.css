@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -333,8 +334,8 @@
   opacity: 1;
 }
 
-/* Enhanced cursor following effect */
-.interactive-bg::after {
+/* Professional background effect */
+.professional-bg::after {
   content: '';
   position: absolute;
   top: 0;
@@ -342,12 +343,17 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-      rgba(59, 130, 246, 0.1), 
-      rgba(139, 92, 246, 0.05), 
+    radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+      rgba(59, 130, 246, 0.08), 
+      rgba(139, 92, 246, 0.04), 
       transparent 40%);
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.professional-bg:hover::after {
+  opacity: 1;
 }
 
 /* Enhanced hover effects */
@@ -548,7 +554,8 @@ button[variant="outline"]:hover {
   }
   
   .interactive-bg::before,
-  .interactive-bg::after {
+  .interactive-bg::after,
+  .professional-bg::after {
     display: none;
   }
 }
