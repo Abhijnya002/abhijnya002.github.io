@@ -166,13 +166,14 @@ const Index = () => {
     {
       title: "AI-Powered Data Extraction & Structuring",
       period: "Jan 2025 - April 2025",
-      tech: ["Python", "Pandas", "OpenPyXL", "Regex", "NLP"],
-      description: "Developed LLM powered pipeline to convert unstructured renovation meeting transcripts into structured Scope of Work data",
-      highlights: [
-        "Used Flan-T5 and DistilBART-CNN for task generation",
-        "Enabled scalable export to Excel using OpenPyXL",
-        "Reduced review time & errors while supporting downstream planning"
-      ],
+      tech: ["Python", "Flask", "Pandas", "OpenPyXL", "Regex", "LLM", "React", "Tailwind CSS", "TypeScript"],
+  description: "Built a full-stack LLM-powered tool that transforms unstructured DOCX transcripts into structured Excel reports containing tasks, budgets, and responsibilities.",
+  highlights: [
+    "Used Flan-T5 and DistilBART-CNN to extract structured tasks, summaries, and stakeholder info from renovation transcripts",
+    "Integrated frontend (React + Tailwind) with Flask API and zero-GPU LLM inference for cost-effective deployment",
+    "Exported professional Excel reports with styling, categorization, and NLP-driven content using OpenPyXL",
+    "Implemented graceful degradation using regex and zero-shot fallback when LLMs are unavailable"
+  ],
       link: "https://ai-powered-data-extracter.vercel.app/"
     },
     {
@@ -634,7 +635,7 @@ const Index = () => {
             <div className="mb-16">
               <h3 className="text-3xl font-bold text-center mb-10 text-yellow-400">🏆 Awards & Achievements</h3>
               <div className="flex justify-center">
-                <Card className="bg-gradient-to-r from-blue-900/40 to-orange-900/40 border-yellow-400/50 backdrop-blur-sm hover:from-yellow-900/60 hover:to-orange-900/60 transition-all duration-300 hover-scale">
+                <Card className="bg-gradient-to-r from-purple-900/40 to-orange-900/40 border-purple-400/50 backdrop-blur-sm hover:from-yellow-900/60 hover:to-orange-900/60 transition-all duration-300 hover-scale">
                   <CardContent className="p-8 text-center">
                     <Award className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
                     <p className="text-yellow-200 font-bold text-xl mb-2">BRONZE STAR Award - Mercedes Benz R&D (2023)</p>
