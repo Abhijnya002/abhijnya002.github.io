@@ -172,7 +172,8 @@ const Index = () => {
         "Used Flan-T5 and DistilBART-CNN for task generation",
         "Enabled scalable export to Excel using OpenPyXL",
         "Reduced review time & errors while supporting downstream planning"
-      ]
+      ],
+      link: "https://ai-powered-data-extracter.vercel.app/"
     },
     {
       title: "Threat Intelligence Dashboard",
@@ -184,7 +185,7 @@ const Index = () => {
         "Integrated dynamic visualizations (Pie, Bar, Line charts)",
         "Enhanced security team workflows and cyber situational awareness"
       ],
-      link: "#"
+      link: "https://abhijnya002.github.io/CTI-Dashboard/"
     },
     {
       title: "College Event Management System",
@@ -195,18 +196,21 @@ const Index = () => {
         "Incorporated accounting functions for financial tracking and reporting",
         "Enabled users to register for events and explore club activities",
         "Ensured secure data transfer with backend validation and error handling"
-      ]
+      ],
+      link: "https://github.com/Abhijnya002/College-Event-Mangement-System-"
     },
     {
-      title: "Web Cloner Tool",
-      period: "Feb 2021 – Apr 2021",
-      tech: ["HTML/CSS", "JavaScript", "Node.JS", "Puppeteer"],
-      description: "Developed a web scraping tool that clones static websites by extracting HTML, CSS, and image assets",
-      highlights: [
-        "Enabled users to input target URLs and download full page structure",
-        "View cloned content locally for offline analysis or archival",
-        "Implemented robust error handling for dynamic page structures"
-      ]
+      title: "AI-Powered Web Cloner",
+  period: "Feb 2025 – Apr 2025",
+  tech: ["Next.js 15", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "Playwright", "BeautifulSoup", "Zephyr-7B", "Hugging Face API"],
+  description: "Full-stack AI-driven website cloning tool that scrapes and regenerates HTML/CSS design using LLMs for rapid prototyping and UI mimicry.",
+  highlights: [
+    "Clones public websites by scraping HTML/CSS via Playwright and generating regenerated code via Hugging Face's Zephyr-7B model",
+    "Built animated, responsive UI with light/dark mode toggle and live HTML rendering in iframe",
+    "Implemented error handling, loader animations, and persistent preferences for seamless UX",
+    "Integrated FastAPI backend for scraping and HTML generation endpoints"
+  ],
+  link: "https://github.com/Abhijnya002/Web-cloner"
     },
     {
       title: "Handwritten Math Solver",
@@ -217,7 +221,8 @@ const Index = () => {
         "Optimized model for diverse handwriting styles and sizes",
         "Trained on dataset of 10,000 images",
         "Ensured reliable and precise recognition capabilities"
-      ]
+      ],
+      link : "https://github.com/Abhijnya002/Handwritten-Maths-solver"
     }
   ];
 
@@ -629,7 +634,7 @@ const Index = () => {
             <div className="mb-16">
               <h3 className="text-3xl font-bold text-center mb-10 text-yellow-400">🏆 Awards & Achievements</h3>
               <div className="flex justify-center">
-                <Card className="bg-gradient-to-r from-yellow-900/40 to-orange-900/40 border-yellow-400/50 backdrop-blur-sm hover:from-yellow-900/60 hover:to-orange-900/60 transition-all duration-300 hover-scale">
+                <Card className="bg-gradient-to-r from-blue-900/40 to-orange-900/40 border-yellow-400/50 backdrop-blur-sm hover:from-yellow-900/60 hover:to-orange-900/60 transition-all duration-300 hover-scale">
                   <CardContent className="p-8 text-center">
                     <Award className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
                     <p className="text-yellow-200 font-bold text-xl mb-2">BRONZE STAR Award - Mercedes Benz R&D (2023)</p>
