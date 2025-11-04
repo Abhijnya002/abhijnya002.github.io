@@ -664,7 +664,7 @@ At Syracuse, I support data-driven policy research through automated API integra
           <Card className="bg-gradient-to-r from-[#4E1A7E] to-[#C7791B] border-yellow-400/60 backdrop-blur-md hover:from-[#C7791B]/70 hover:to-[#4E1A7E]/70 transition-all duration-300 hover-scale">
             <CardContent className="p-8 text-center">
               <img
-                src="/public/lovable-uploads/5bfc4c68-6bde-4581-a163-25e04d5e12cc.png"
+                src="/lovable-uploads/5bfc4c68-6bde-4581-a163-25e04d5e12cc.png"
                 alt="Mercedes-Benz Logo"
                 className="w-20 h-20 mx-auto mb-6"
               />
