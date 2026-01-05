@@ -1,0 +1,42 @@
+═══════════════════════════════════════════════════════════════
+   ABHIJNYA K.G PORTFOLIO - QUICK REFERENCE
+═══════════════════════════════════════════════════════════════
+
+🚀 RUN IT:
+   npm install
+   npm start
+
+📝 EDIT YOUR CONTENT:
+   File: src/data/portfolioData.js
+   - Projects, Experience, Honors, Skills all here!
+
+🖼️ ADD IMAGES:
+   /public/Abhijnya.webp
+   /public/Abhijnya-Profile-Photo.webp
+
+📄 ADD RESUME:
+   /src/assets/YourResume.pdf
+   Update imports in AboutPage.js & NavBar.js
+
+🔗 UPDATE LINKS:
+   src/components/SpecialComponents/Footer.js
+
+📊 UPDATE STATS:
+   src/components/AboutPage/AboutPage.js (aboutData array)
+
+🚢 DEPLOY:
+   npm run build
+   Deploy 'build' folder to Vercel/Netlify/GitHub Pages
+
+✅ WORKING:
+   - All portfolio sections
+   - Animations & transitions  
+   - Responsive design
+   - Static data (no backend!)
+
+⚠️ DISABLED (needs backend):
+   - AI Companion Chat
+   - Admin Panel
+   - Feed
+
+═══════════════════════════════════════════════════════════════
