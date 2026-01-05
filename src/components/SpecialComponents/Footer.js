@@ -15,7 +15,7 @@ const Footer = ({ isBatterySavingOn, addTab }) => {
       label: "LinkedIn",
     },
     {
-      href: "mailto:your.email@example.com",
+      href: "mailto:abhijnyakg@gmail.com",
       icon: require("../../assets/img/icons/email.png"),
       label: "Email",
     },
