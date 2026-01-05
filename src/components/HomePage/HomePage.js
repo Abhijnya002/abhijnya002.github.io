@@ -31,7 +31,7 @@ function HomePage({ isBatterySavingOn, scrolled, addTab }) {
   // const opacity = useTransform(scrollYProgress, [0.25, 1], [1, 1]);
 
   const keywords = [
-    "Data Analysis Engineer & Full-Stack Developer | Crafting Scalable AI/ML Systems",
+    "AI/ML Engineer & Full-Stack Developer | Building Intelligent Systems & Scalable Solutions",
     "Where data meets intelligence • Committed to accuracy and innovation",
   ];
 

@@ -23,8 +23,8 @@ const EducationPage = ({ isBatterySavingOn, isWindowModalVisible }) => {
     const getEducation = async () => {
       try {
         const data = await fetchEducation();
-        // Sort by period (latest first) - reverse so newest is first
-        setEducationList(data.reverse());
+        // Keep Syracuse University first (already in correct order in portfolioData.js)
+        setEducationList(data);
       } catch (error) {
         console.error("Error fetching education:", error);
       }

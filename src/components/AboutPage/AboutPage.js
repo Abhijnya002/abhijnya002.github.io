@@ -119,7 +119,7 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
               >
                 <span className="about-name">Abhijnya Konanduru Gurumurthy</span>
                 <p className="about-role">
-                  M.S. in Computer Science, Data Analysis Engineer & Full-Stack Developer
+                  M.S. in Computer Science, AI/ML Engineer & Full-Stack Developer
                 </p>
                 <p className="about-description">
                   I'm Abhijnya Konanduru Gurumurthy, a Data and Research Engineer pursuing my M.S. in Computer Science at Syracuse University, with experience at Mercedes-Benz Research and Development. I specialize in building scalable data pipelines, automating large-scale analytics workflows, and developing interactive dashboards using Python, SQL, and Power BI. At Syracuse, I support data-driven policy research through automated API integrations and structured reporting pipelines. Previously at Mercedes-Benz, I optimized analytics systems that improved efficiency by 30% and achieved 99.9% data accuracy, combining technical precision with strategic impact.
