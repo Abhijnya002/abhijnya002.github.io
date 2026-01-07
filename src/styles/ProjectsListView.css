@@ -165,12 +165,12 @@
 
 .project-image {
   margin: 20px 0px 20px 20px;
-  flex: 1.2; /* Slightly larger flex ratio - matching Kartavya's balanced layout */
-  min-width: 300px; /* Minimum width for good visibility */
-  max-width: 400px; /* Maximum width - matching Kartavya's proportions */
+  flex: 1.5; /* Increased flex ratio for wider images */
+  min-width: 350px; /* Increased minimum width */
+  max-width: 500px; /* Increased maximum width for broader horizontal size */
   width: 100%;
   height: 0;
-  padding-bottom: 35%; /* Reduced height to match paragraph length - cropped from 52.41% */
+  padding-bottom: 35%; /* Maintain aspect ratio */
   position: relative;
   border-radius: 0; /* No border radius - exact match to PersonaForge card */
   overflow: hidden; /* Crop image to fit container */
@@ -221,12 +221,12 @@
   }
 
   .project-image {
-    flex: 1.2; /* Maintain flex ratio */
+    flex: 1.5; /* Increased flex ratio for wider images */
     margin: 20px 0 20px 20px;
     width: 100%;
-    min-width: 280px;
-    max-width: 350px;
-    padding-bottom: 35%; /* Reduced height to match paragraph */
+    min-width: 320px;
+    max-width: 450px; /* Increased max-width for broader images */
+    padding-bottom: 35%; /* Maintain aspect ratio */
   }
 }
 
