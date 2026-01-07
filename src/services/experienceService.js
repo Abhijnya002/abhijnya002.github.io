@@ -6,6 +6,10 @@ const getCompanyLogo = (companyName) => {
     "Syracuse University": "syracuse-university",
     "Mercedes Benz Research and Development": "mercedes-benz",
     "Mercedes-Benz Research and Development": "mercedes-benz",
+    "Mercedes-Benz Research & Development": "mercedes-benz",
+    "Mercedes-Benz Research & Development India": "mercedes-benz",
+    "Samsung R&D Institute India": "samsung",
+    "Samsung": "samsung",
     "Amazon Web Services": "aws",
     "AWS": "aws"
   };
@@ -28,9 +32,25 @@ const transformExperienceImages = (experience) => {
   let experienceImages = experience.experienceImages;
   if (!experienceImages || !Array.isArray(experienceImages)) {
     const imagePath = experience.experienceImagePath || "";
-    const imageUrl = imagePath 
-      ? `${process.env.PUBLIC_URL}/images/${imagePath}.webp`
-      : `${process.env.PUBLIC_URL}/images/default-experience.webp`;
+    let imageUrl;
+    if (imagePath) {
+      // Properly encode the image path - encode spaces and special characters
+      const pathParts = imagePath.split("/");
+      const fileName = pathParts[pathParts.length - 1];
+      const directory = pathParts.slice(0, -1).join("/");
+      
+      // Encode filename (handles spaces, &, etc.)
+      const encodedFileName = encodeURIComponent(fileName + ".webp");
+      
+      // Reconstruct path with encoded filename
+      if (directory) {
+        imageUrl = `${process.env.PUBLIC_URL}/images/${directory}/${encodedFileName}`;
+      } else {
+        imageUrl = `${process.env.PUBLIC_URL}/images/${encodedFileName}`;
+      }
+    } else {
+      imageUrl = `${process.env.PUBLIC_URL}/images/default-experience.webp`;
+    }
     experienceImages = [imageUrl];
   }
   
