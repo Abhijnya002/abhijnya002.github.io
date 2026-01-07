@@ -3,40 +3,97 @@
 export const projectsData = [
   {
     _id: "1",
-    projectTitle: "PersonaForge: Where Voice Meets AI",
-    projectLink: "personaforge",
-    projectDescription: "Spearheaded a Windows desktop voice assistant using Electron, React/TypeScript (Vite), Node.js, Electron IPC + pre-load, and Web Audio (AudioWorklet); integrated ElevenLabs (STT/TTS) with Gemini/OpenAI; implemented a 4-stage real-time loop and an executor framework for 8 core OS actions. Awarded Best Use of AI Using ElevenLabs.",
-    projectTech: ["Electron", "React", "TypeScript", "Node.js", "ElevenLabs", "Gemini", "OpenAI", "Web Audio API"],
+    projectTitle: "Healthcare Named Entity Recognition System",
+    projectLink: "healthcare-ner",
+    projectDescription: "Developed an end-to-end Named Entity Recognition system using BioBERT to extract disease and chemical entities from biomedical text, outperforming rule-based and BiLSTM-CRF baselines. Built a complete ML pipeline including preprocessing, baseline modeling, transformer fine-tuning, and precision/recall/F1 evaluation. Productionized the model using a Flask REST API and integrated a React dashboard featuring live predictions, confusion matrices, and interactive visual analytics.",
+    projectTech: ["Python", "PyTorch", "BioBERT", "Flask", "React", "Transformers", "spaCy", "Recharts"],
     projectHighlights: [
-      "Spearheaded a Windows desktop voice assistant using Electron, React/TypeScript (Vite), Node.js, Electron IPC + pre-load, and Web Audio (AudioWorklet)",
-      "Integrated ElevenLabs (STT/TTS) with Gemini/OpenAI",
-      "Implemented a 4-stage real-time loop and an executor framework for 8 core OS actions",
-      "Awarded Best Use of AI Using ElevenLabs"
+      "AI-powered biomedical NER system using BioBERT to extract disease and chemical entities",
+      "Outperformed rule-based and BiLSTM-CRF baselines with complete ML pipeline",
+      "Productionized using Flask REST API with React dashboard for real-time analytics",
+      "Interactive visualizations including confusion matrices and live predictions"
     ],
-    projectGitHubLink: "https://github.com/Kartavya904/PersonaForge",
-    projectDemoLink: "",
-    projectImagePath: "projectTable/PersonaForge",
+    projectGitHubLink: "https://github.com/Abhijnya002/Named-Entity-Recognition-for-Medical-Text",
+    projectDemoLink: "https://medical-ner-dashboard.vercel.app/",
+    projectImagePath: "projectTable/Healthcare Named Entity Recognition System",
     projectYear: "2025",
-    projectPeriod: "MakeUC Hackathon 2025 | November 2025",
+    projectPeriod: "Oct 2025 – Nov 2025",
     featured: true
   },
   {
     _id: "2",
-    projectTitle: "My AI Companion - Personal Portfolio Website",
-    projectLink: "my-ai-companion",
-    projectDescription: "Meet my AI Companion: He knows all about my journey and loves to share. Transforming a personal portfolio into an interactive experience with a custom AI chatbot that lives on the portfolio site, capable of answering questions about my background as if you're chatting with me. The AI Companion uses semantic vector search, GPT-4 for answer generation, and maintains conversation context. Features include Web Speech API for voice input, context-aware dialog, and real-time feedback with typewriter reveal effect.",
-    projectTech: ["React", "Node.js", "Fastify", "MongoDB Atlas", "OpenAI GPT-4", "Vector Search", "Web Speech API"],
+    projectTitle: "IoT Attack Detection & Visualization System",
+    projectLink: "iot-attack-detection",
+    projectDescription: "Built an intrusion detection system for IoT networks using the CICIDS2017 dataset, evaluating multiple ML models including Random Forest, SVM, CNN, LSTM, and Autoencoders. Identified Random Forest as the most effective model for tabular IoT data and applied SHAP explainability to highlight attack-driving features. Developed an interactive dashboard to visualize model performance, confusion matrices, and feature importance, supporting deployment and security analysis decisions.",
+    projectTech: ["Python", "Machine Learning", "Random Forest", "SHAP", "CICIDS2017", "Data Visualization"],
     projectHighlights: [
-      "AI Companion that answers questions about my background using semantic vector search and GPT-4",
-      "Knowledge base aggregation from portfolio content, resume, and GitHub repositories",
-      "Conversation memory maintaining context across multiple interactions",
-      "Voice input support using Web Speech API and real-time feedback with typewriter effect"
+      "Machine learning–based IoT intrusion detection system with explainable AI",
+      "Evaluated multiple ML models (Random Forest, SVM, CNN, LSTM, Autoencoders)",
+      "Applied SHAP explainability to highlight attack-driving features",
+      "Interactive dashboard for model performance and feature importance visualization"
     ],
-    projectGitHubLink: "https://github.com/Kartavya904/Kartavya-Portfolio-MERN",
+    projectGitHubLink: "https://github.com/Abhijnya002/IOT-attack-detection-and-visualization-system",
     projectDemoLink: "",
-    projectImagePath: "projectTable/My AI Companion",
+    projectImagePath: "projectTable/IoT Attack Detection & Visualization System",
     projectYear: "2025",
-    projectPeriod: "Full-Stack AI Development | January 2025 - April 2025",
+    projectPeriod: "Feb 2025 – Apr 2025",
+    featured: true
+  },
+  {
+    _id: "3",
+    projectTitle: "AI-Powered Website Cloner",
+    projectLink: "ai-powered-web-cloner",
+    projectDescription: "Developed a website cloning tool that scrapes HTML/CSS context from public websites and regenerates layouts using LLMs. Implemented browser-based scraping with Playwright to handle JavaScript-heavy pages and orchestrated backend processing using FastAPI. Built a responsive Next.js interface with live iframe previews, raw HTML inspection, dark/light mode, and smooth loading animations for an intuitive user experience.",
+    projectTech: ["Next.js", "TypeScript", "FastAPI", "Python", "Playwright", "LLM", "Tailwind CSS"],
+    projectHighlights: [
+      "Full-stack AI tool that clones public websites by scraping and regenerating layouts using LLMs",
+      "Browser-based scraping with Playwright for JavaScript-heavy pages",
+      "Responsive Next.js interface with live iframe previews and dark/light mode",
+      "Smooth loading animations and intuitive user experience"
+    ],
+    projectGitHubLink: "https://github.com/Abhijnya002/Web-cloner",
+    projectDemoLink: "",
+    projectImagePath: "projectTable/AI-Powered Website Cloner",
+    projectYear: "2025",
+    projectPeriod: "Aug 2025 – Sep 2025",
+    featured: true
+  },
+  {
+    _id: "4",
+    projectTitle: "AI-Powered Data Extraction & Structuring",
+    projectLink: "ai-powered-data-extraction",
+    projectDescription: "Built an LLM-powered pipeline to transform unstructured renovation meeting transcripts into structured, actionable Scope of Work data. Used Flan-T5 and DistilBART-CNN to extract tasks, generate concise titles and summaries, categorize work items, and map informal budget mentions into standardized formats. Enabled scalable export to formatted Excel reports using OpenPyXL, reducing manual review time and improving documentation accuracy.",
+    projectTech: ["Python", "Flask", "LLM", "Flan-T5", "DistilBART-CNN", "React", "Tailwind CSS", "OpenPyXL"],
+    projectHighlights: [
+      "AI system that converts unstructured renovation transcripts into structured Excel-based Scope of Work reports",
+      "Used Flan-T5 and DistilBART-CNN for task extraction and summarization",
+      "Scalable export to formatted Excel reports using OpenPyXL",
+      "Reduced manual review time and improved documentation accuracy"
+    ],
+    projectGitHubLink: "https://github.com/Abhijnya002/AI-powered-data-extracter",
+    projectDemoLink: "https://ai-powered-data-extracter.vercel.app/",
+    projectImagePath: "projectTable/AI-Powered Data Extraction & Structuring",
+    projectYear: "2025",
+    projectPeriod: "Feb 2025 – Apr 2025",
+    featured: true
+  },
+  {
+    _id: "5",
+    projectTitle: "Threat Intelligence Dashboard",
+    projectLink: "threat-intelligence-dashboard",
+    projectDescription: "Developed a threat intelligence dashboard using the AlienVault OTX API to visualize and analyze real-time cyber threat indicators. Implemented advanced filtering, dynamic charts, dark/light mode, and CSV export to streamline threat analysis workflows. Built with React (Vite), Recharts, and custom CSS animations to deliver a responsive and visually engaging interface for security teams.",
+    projectTech: ["React.js", "Vite", "Recharts", "AlienVault OTX API", "CSS Animations"],
+    projectHighlights: [
+      "Interactive cyber threat intelligence dashboard powered by AlienVault OTX with real-time visual analytics",
+      "Advanced filtering, dynamic charts, and dark/light mode toggle",
+      "CSV export functionality for threat analysis workflows",
+      "Responsive and visually engaging interface for security teams"
+    ],
+    projectGitHubLink: "https://github.com/Abhijnya002/CTI-Dashboard",
+    projectDemoLink: "https://abhijnya002.github.io/CTI-Dashboard/",
+    projectImagePath: "projectTable/Threat Intelligence Dashboard",
+    projectYear: "2025",
+    projectPeriod: "Apr 2025 – May 2025",
     featured: true
   }
 ];
