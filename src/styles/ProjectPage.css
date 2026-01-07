@@ -9,13 +9,30 @@
   justify-content: flex-start;
   min-height: calc(100vh - 52px);
   background-color: #212529; /* Fallback color */
-  overflow: hidden; /* Ensure SpotlightBG doesn't overflow */
+  overflow: visible; /* Allow content to scroll while keeping background */
   scroll-behavior: smooth;
   scrollbar-width: none;
   font-family: "Montserrat", sans-serif;
   color: #212529;
   text-align: center;
   z-index: 1;
+}
+
+.project-bg-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.project-page-div {
+  position: relative;
+  z-index: 2; /* Ensure content is above background */
+  width: 100%;
 }
 
 /* @media (max-width: 992px) {
