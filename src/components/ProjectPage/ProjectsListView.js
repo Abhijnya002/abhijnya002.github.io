@@ -28,9 +28,8 @@ function ProjectsListView({ addTab, isBatterySavingOn, showFeatured }) {
   useEffect(() => {
     async function getProjects() {
       try {
-        // Projects are already sorted by date (latest first) in fetchProjects
         const data = await fetchProjects();
-        setProjects(data);
+        setProjects(data.reverse());
         // Initialize card states for hover effects
         setCardStates(
           data.map(() => ({
@@ -333,12 +332,8 @@ function ProjectsListView({ addTab, isBatterySavingOn, showFeatured }) {
                         project.projectSubTitle !== "NA" && (
                           <span>{project.projectSubTitle}</span>
                         )}
-                      {project.projectPeriod &&
-                        project.projectPeriod !== "NA" && (
-                          <span>{project.projectSubTitle && project.projectSubTitle !== "NA" ? " | " : ""}{project.projectPeriod}</span>
-                        )}
                       {project.projectTimeline &&
-                        project.projectTimeline !== "NA" && !project.projectPeriod && (
+                        project.projectTimeline !== "NA" && (
                           <span> | {project.projectTimeline}</span>
                         )}
                     </div>
@@ -385,7 +380,7 @@ function ProjectsListView({ addTab, isBatterySavingOn, showFeatured }) {
                   <div
                     className="project-image"
                     style={{
-                      backgroundImage: `url('${project.projectImages && project.projectImages[0] ? project.projectImages[0].replace(/'/g, "%27") : `${process.env.PUBLIC_URL}/images/default-project.webp`}')`,
+                      backgroundImage: `url(${project.projectImages[0]})`,
                     }}
                   ></div>
                 </div>
