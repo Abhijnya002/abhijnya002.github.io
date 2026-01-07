@@ -100,58 +100,77 @@ export const projectsData = [
 
 export const experienceData = [
   {
+    _id: "1",
+    experienceTitle: "Graduate Research Assistant",
+    experienceLink: "graduate-research-assistant-syracuse",
+    experienceCompany: "Syracuse University, Maxwell School of Citizenship and Public Affairs",
+    experienceLocation: "Syracuse, NY",
+    experiencePeriod: "Sep 2025 – Present",
+    experienceDescription: "Research-focused data engineering role building scalable pipelines for large-scale public document extraction and analysis",
+    experienceHighlights: [
+      "Automated retrieval of large public document datasets using REST APIs and browser automation with pagination and rate-limit handling",
+      "Built modular Python pipelines to extract, clean, and normalize data from PDFs, including OCR-based workflows",
+      "Converted unstructured policy documents into structured, analysis-ready datasets and reports",
+      "Improved pipeline reliability and efficiency by 40% through robust error handling, logging, and incremental processing"
+    ],
+    experienceTech: ["Python", "REST APIs", "PDF Processing", "OCR", "Data Pipelines"],
+    experienceImagePath: "experienceTable/Graduate Research Assistant",
+    experienceYear: "2025-Present"
+  },
+  {
     _id: "2",
     experienceTitle: "Data Analysis Engineer",
     experienceLink: "data-analysis-engineer-mercedes",
-    experienceCompany: "Mercedes Benz Research and Development",
+    experienceCompany: "Mercedes-Benz Research & Development India",
     experienceLocation: "Bangalore, India",
-    experiencePeriod: "Aug 2022 - Aug 2024",
-    experienceDescription: "Data Analysis Engineer optimizing analytics systems and building scalable data pipelines",
+    experiencePeriod: "Mar 2022 – Aug 2024",
+    experienceDescription: "Industry data engineering and analytics role delivering real-time insights, observability, and decision support at scale",
     experienceHighlights: [
-      "Received BRONZE STAR award for driving customer-centric strategies, executing three critical service enhancements",
-      "Enhanced project efficiency by 30% and accelerated delivery through Agile practices",
-      "Designed and optimized scalable data pipelines using Python, AWS, and PostgreSQL, improving data quality to 99.9%",
-      "Built CI/CD dashboard with AWS CodePipeline, reducing deployment issues by 30%",
-      "Leveraged Power BI, Grafana, and PostgreSQL for real-time monitoring dashboards"
+      "Designed and optimized scalable data pipelines using Python, AWS, and PostgreSQL to process high-volume sensor and system data with 99.9% accuracy",
+      "Built real-time monitoring and KPI dashboards using Power BI and Grafana to support engineering and business decision-making",
+      "Developed a CI/CD observability dashboard using AWS CodePipeline and CodeBuild, reducing troubleshooting time by 80% and deployment issues by 30%",
+      "Integrated SYS and SWE process models into dashboards to track KPIs across requirements, design, and testing phases",
+      "Recognized with the BRONZE STAR Award for delivering customer-centric service enhancements",
+      "Collaborated cross-functionally and mentored interns to improve analytics adoption and data-driven workflows"
     ],
-    experienceTech: ["Python", "AWS", "PostgreSQL", "Power BI", "Grafana", "CI/CD", "Agile"],
+    experienceTech: ["Python", "AWS", "PostgreSQL", "Power BI", "Grafana", "CI/CD", "Data Pipelines"],
     experienceImagePath: "experienceTable/Data Analysis Engineer",
     experienceYear: "2022-2024"
   },
   {
-    _id: "1",
-    experienceTitle: "Research Assistant",
-    experienceLink: "research-assistant-syracuse",
-    experienceCompany: "Syracuse University",
-    experienceLocation: "Syracuse, NY",
-    experiencePeriod: "Jan 2025 - May 2025",
-    experienceDescription: "Data and Research Engineer supporting data-driven policy research",
+    _id: "3",
+    experienceTitle: "Software Testing Intern – Static Code Analysis",
+    experienceLink: "software-testing-intern-mercedes",
+    experienceCompany: "Mercedes-Benz Research & Development India",
+    experienceLocation: "Bangalore, India (Hybrid)",
+    experiencePeriod: "Mar 2022 – Jun 2022",
+    experienceDescription: "Software quality internship focused on static code analysis and automotive-grade safety tooling",
     experienceHighlights: [
-      "Automated retrieval of large-scale datasets through REST APIs with pagination handling and rate-limit mitigation to ensure data completeness",
-      "Designed modular Python scripts for parsing JSON responses, transforming metadata, and exporting structured Excel/CSV outputs for faculty research workflows",
-      "Optimized end-to-end data pipelines with error handling, logging, and incremental updates, reducing processing overhead by 40%",
-      "Collaborated with interdisciplinary research teams to enable reproducible data analysis and policy-driven insights"
+      "Researched and evaluated static code analysis tools used in automotive software development, focusing on Coverity and Astree",
+      "Performed comparative analysis of tool capabilities, strengths, and limitations for production use",
+      "Conducted functional testing of Coverity in collaboration with the vendor team, identifying 20+ actionable advantages",
+      "Internship performance led to conversion into Graduate Engineering Trainee, followed by a full-time Data Analysis Engineer role"
     ],
-    experienceTech: ["Python", "REST APIs", "Data Processing", "Excel/CSV"],
-    experienceImagePath: "experienceTable/Research Assistant",
-    experienceYear: "2025"
+    experienceTech: ["Static Code Analysis", "Coverity", "Astree", "Software Testing"],
+    experienceImagePath: "experienceTable/Software Testing Intern",
+    experienceYear: "2022"
   },
   {
-    _id: "3",
-    experienceTitle: "Student Trainee",
-    experienceLink: "student-trainee-mercedes",
-    experienceCompany: "Mercedes Benz Research and Development",
+    _id: "4",
+    experienceTitle: "Application Development Intern",
+    experienceLink: "application-development-intern-samsung",
+    experienceCompany: "Samsung R&D Institute India",
     experienceLocation: "Bangalore, India",
-    experiencePeriod: "Mar 2021 - Apr 2022",
-    experienceDescription: "Student Trainee working on voice-enabled applications",
+    experiencePeriod: "Nov 2020 – Apr 2021",
+    experienceDescription: "AI application development internship building a production-ready Bixby voice assistant capsule",
     experienceHighlights: [
-      "Implemented voice-enabled Literary Info Bixby capsule integrating REST APIs",
-      "Established structured capsule serving as reference for 3+ project teams",
-      "Enhanced user experience through seamless voice interactions"
+      "Developed a voice-enabled Literary Info Bixby capsule integrating REST APIs to deliver structured information on books, authors, and literary events",
+      "Designed dialog flows, defined core use cases, and implemented backend logic following software design principles",
+      "Built reusable capsule components adopted as reference implementations by 3+ teams within the Samsung PRISM program"
     ],
-    experienceTech: ["Bixby", "REST APIs", "Voice Interface"],
-    experienceImagePath: "experienceTable/Student Trainee",
-    experienceYear: "2021-2022"
+    experienceTech: ["Bixby", "REST APIs", "Voice Interface", "Application Development"],
+    experienceImagePath: "experienceTable/Application Development Intern",
+    experienceYear: "2020-2021"
   }
 ];
 
