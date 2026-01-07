@@ -38,7 +38,8 @@ import github from "../assets/img/icons/github.svg";
 import dsa from "../assets/img/icons/dsa.svg";
 import html from "../assets/img/icons/html.svg";
 import django from "../assets/img/icons/django.svg";
-import postgresql from "../assets/img/icons/postgresql.svg";
+// PostgreSQL SVG has style tag issues - using fallback for now
+// import postgresql from "../assets/img/icons/postgresql.svg";
 import mysql from "../assets/img/icons/mysql.svg";
 import dynamodb from "../assets/img/icons/dynamodb.svg";
 import docker from "../assets/img/icons/docker.svg";
@@ -97,7 +98,7 @@ const icons = {
   html,
   django,
   // Using actual icon files
-  postgresql,
+  postgresql: sql, // PostgreSQL SVG has style tag issues - using SQL icon as fallback
   mysql,
   dynamodb,
   docker,
