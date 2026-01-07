@@ -166,11 +166,11 @@
 .project-image {
   margin: 20px 0px 20px 20px;
   flex: 1; /* Smaller flex ratio for image */
-  min-width: 250px; /* Smaller minimum width */
-  max-width: 300px; /* Smaller maximum width to match Kartavya's style */
+  min-width: 350px; /* Minimum width */
+  max-width: 450px; /* Maximum width for landscape images */
   width: 100%;
   height: 0;
-  padding-bottom: 62.5%; /* 8:5 aspect ratio for compact images */
+  padding-bottom: 52.41%; /* 566/1080 = 0.5241 (1080x566px landscape aspect ratio) */
   position: relative;
   border-radius: 12px; /* Match card's border-radius */
   overflow: hidden;
@@ -190,7 +190,7 @@
 }
 
 .project-image[style*="background-image"] {
-  background-size: cover !important; /* Uniform background image sizing */
+  background-size: contain !important; /* Show full image without cropping */
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
@@ -221,9 +221,9 @@
     flex: 1; /* Prevent flex shrink issues */
     margin: 20px 0 20px 20px;
     width: 100%;
-    min-width: 200px;
-    max-width: 250px;
-    padding-bottom: 62.5%; /* Maintain 8:5 aspect ratio */
+    min-width: 280px;
+    max-width: 350px;
+    padding-bottom: 52.41%; /* Maintain 1080x566px landscape aspect ratio */
   }
 }
 
@@ -246,7 +246,7 @@
     max-width: 100%;
     min-width: auto;
     height: 0;
-    padding-bottom: 75%; /* Maintain 4:3 aspect ratio */
+    padding-bottom: 52.41%; /* Maintain 1080x566px landscape aspect ratio */
   }
 }
 
@@ -262,7 +262,7 @@
     max-width: 100%;
     min-width: auto;
     height: 0;
-    padding-bottom: 75%; /* Maintain 4:3 aspect ratio */
+    padding-bottom: 52.41%; /* Maintain 1080x566px landscape aspect ratio */
     margin: 20px 0 0;
   }
 }
