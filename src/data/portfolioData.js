@@ -61,14 +61,14 @@ export const projectsData = [
     _id: "4",
     projectTitle: "Medical Text Named Entity Recognition",
     projectLink: "medical-ner",
-    projectDescription: "A sophisticated Named Entity Recognition (NER) system for medical text using BioBERT, a domain-specific transformer model pre-trained on biomedical literature. This React + Flask application identifies and extracts chemical and disease entities from medical text using the BC5CDR (BioCreative V CDR) biomedical dataset containing 13,938 annotated sentences. The system outperforms traditional rule-based and BiLSTM-CRF baselines, implements precision/recall/F1 evaluation metrics, and provides an interactive React dashboard with Recharts visualizations for live predictions. The end-to-end ML pipeline includes transformer fine-tuning, Flask REST API integration, and real-time text processing capabilities for healthcare informatics applications.",
+    projectDescription: "An end-to-end AI system for extracting diseases and chemical entities from biomedical text using a fine-tuned BioBERT model. The system significantly outperforms traditional NLP approaches, achieving an 85.14% overall F1-score, with 89.75% F1 on chemical entities and 79.74% on diseases, surpassing rule-based and BiLSTM-CRF baselines. The project includes a complete ML pipeline—from data preprocessing and baseline modeling to transformer fine-tuning and detailed evaluation. It is productionized via a Flask REST API for real-time predictions and integrated with a React dashboard featuring live entity detection, confusion matrices, and interactive visualizations, delivering a polished full-stack ML application suitable for real-world healthcare text analytics.",
     projectTech: ["React", "Flask", "Python", "PyTorch", "Transformers", "BioBERT", "spaCy", "seqeval", "Recharts"],
     projectHighlights: [
-      "Implemented BioBERT-based NER model for identifying chemical and disease entities in medical text",
-      "Trained on BC5CDR biomedical dataset with 13,938 sentences containing annotated entities",
-      "Built interactive React dashboard with Recharts for visualizing entity extraction results",
-      "Integrated Flask backend for model inference and real-time text processing",
-      "Achieved high accuracy in entity recognition with proper evaluation metrics using seqeval"
+      "Achieved 85.14% overall F1-score, with 89.75% F1 on chemical entities and 79.74% on diseases",
+      "Outperformed traditional rule-based and BiLSTM-CRF baselines using fine-tuned BioBERT model",
+      "Built complete ML pipeline from data preprocessing to transformer fine-tuning and evaluation",
+      "Productionized via Flask REST API for real-time predictions with React dashboard integration",
+      "Delivered polished full-stack ML application with live entity detection and interactive visualizations"
     ],
     projectGitHubLink: "https://github.com/Abhijnya002/Named-Entity-Recognition-for-Medical-Text",
     projectDemoLink: "https://medical-ner-dashboard.vercel.app/",
