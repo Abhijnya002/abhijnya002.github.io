@@ -8,18 +8,20 @@ const transformProjectImages = (project) => {
     const imagePath = project.projectImagePath || "";
     let imageUrl;
     if (imagePath) {
-      // Encode spaces and special characters in the image path
-      const encodedPath = encodeURIComponent(imagePath + ".webp").replace(/%2F/g, "/");
-      imageUrl = `${process.env.PUBLIC_URL}/images/${imagePath}.webp`;
-      // Try with encoded filename if spaces exist
-      if (imagePath.includes(" ")) {
-        const pathParts = imagePath.split("/");
-        const fileName = pathParts[pathParts.length - 1];
-        const directory = pathParts.slice(0, -1).join("/");
-        const encodedFileName = encodeURIComponent(fileName + ".webp");
-        imageUrl = directory 
-          ? `${process.env.PUBLIC_URL}/images/${directory}/${encodedFileName}`
-          : `${process.env.PUBLIC_URL}/images/${encodedFileName}`;
+      // Properly encode the image path - encode spaces and special characters
+      // Split path and encode only the filename part, keep directory structure
+      const pathParts = imagePath.split("/");
+      const fileName = pathParts[pathParts.length - 1];
+      const directory = pathParts.slice(0, -1).join("/");
+      
+      // Encode filename (handles spaces, &, etc.)
+      const encodedFileName = encodeURIComponent(fileName + ".webp");
+      
+      // Reconstruct path with encoded filename
+      if (directory) {
+        imageUrl = `${process.env.PUBLIC_URL}/images/${directory}/${encodedFileName}`;
+      } else {
+        imageUrl = `${process.env.PUBLIC_URL}/images/${encodedFileName}`;
       }
     } else {
       imageUrl = `${process.env.PUBLIC_URL}/images/default-project.webp`;
