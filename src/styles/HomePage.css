@@ -302,7 +302,7 @@
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  white-space: wrap;
+  white-space: pre-line;
   overflow: hidden;
 }
 

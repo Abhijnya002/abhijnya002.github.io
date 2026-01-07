@@ -407,26 +407,6 @@ const NavBar = ({ isBatterySavingOn, addTab }) => {
                 </span>
               </a>
             </motion.li>
-            <motion.li
-              className={activeLink === "feed" ? "active nav-item" : "nav-item"}
-              whileHover={screenWidth > 992 ? { scale: 1.1, rotate: -2 } : {}}
-              whileTap={screenWidth > 992 ? { scale: 0.9, rotate: 2 } : {}}
-            >
-              <a
-                href="#feed"
-                className={"navbar-link ai-chat-nav"}
-                onClick={(e) => {
-                  e.preventDefault();
-                  addTab("AIChatTab", { title: "Abhijnya's AI Companion" });
-                  setMenuOpen(false);
-                }}
-              >
-                <span className="navbar-text">
-                  <i className="fa fa-search"></i>{" "}
-                  {menuOpen ? "AI COMPANION" : ""}
-                </span>
-              </a>
-            </motion.li>
           </motion.ul>
         </motion.div>
       </div>

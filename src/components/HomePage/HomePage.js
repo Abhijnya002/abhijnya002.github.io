@@ -31,8 +31,8 @@ function HomePage({ isBatterySavingOn, scrolled, addTab }) {
   // const opacity = useTransform(scrollYProgress, [0.25, 1], [1, 1]);
 
   const keywords = [
-    "AI/ML Engineer & Full-Stack Developer | Building Intelligent Systems & Scalable Solutions",
-    "Where data meets intelligence • Committed to accuracy and innovation",
+    "Building intelligent data systems that turn complexity into clarity.",
+    "From scalable data pipelines to AI-driven analytics and real-time insights.",
   ];
 
   const scrollToSection = (id) => {
@@ -133,9 +133,14 @@ function HomePage({ isBatterySavingOn, scrolled, addTab }) {
                       className="changing-text-animation"
                       sequence={[
                         1500,
-                        ...keywords.map((text) => [text, 3000]), // Typing each keyword with a pause
-                        keywords[keywords.length - 1], // Ensures the last phrase displays permanently
-                      ].flat()}
+                        keywords[0],
+                        500,
+                        "\n",
+                        100,
+                        keywords[1],
+                        3000,
+                        `${keywords[0]}\n${keywords[1]}`, // Display both lines together permanently
+                      ]}
                       speed={{ type: "keyStrokeDelayInMs", value: 17 }} // Fast typing
                       deletionSpeed={{ type: "keyStrokeDelayInMs", value: 8 }}
                       // delay={1000}
