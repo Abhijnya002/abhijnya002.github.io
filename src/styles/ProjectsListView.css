@@ -173,9 +173,9 @@
   padding-bottom: 52.41%; /* 566/1080 = 0.5241 (1080x566px landscape aspect ratio) */
   position: relative;
   border-radius: 12px; /* Match card's border-radius */
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: visible; /* Allow shadow to be visible */
+  background-color: rgba(0, 0, 0, 0.95); /* Dark background matching image shadow */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
 }
 
 .project-image img {
@@ -184,7 +184,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Uniform cropping - images fill the container and maintain aspect ratio */
+  object-fit: contain; /* Show full image without cropping */
   object-position: center; /* Center the image */
   border-radius: 12px;
 }
@@ -193,6 +193,7 @@
   background-size: contain !important; /* Show full image without cropping */
   background-position: center !important;
   background-repeat: no-repeat !important;
+  background-color: rgba(0, 0, 0, 0.95); /* Dark background matching image shadow area */
 }
 
 .learn-button-motioned {

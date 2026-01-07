@@ -61,7 +61,7 @@ export const projectsData = [
     _id: "4",
     projectTitle: "Medical Text Named Entity Recognition",
     projectLink: "medical-ner",
-    projectDescription: "An end-to-end AI system for extracting diseases and chemical entities from biomedical text using a fine-tuned BioBERT model. The system significantly outperforms traditional NLP approaches, achieving an 85.14% overall F1-score, with 89.75% F1 on chemical entities and 79.74% on diseases, surpassing rule-based and BiLSTM-CRF baselines. The project includes a complete ML pipeline—from data preprocessing and baseline modeling to transformer fine-tuning and detailed evaluation. It is productionized via a Flask REST API for real-time predictions and integrated with a React dashboard featuring live entity detection, confusion matrices, and interactive visualizations, delivering a polished full-stack ML application suitable for real-world healthcare text analytics.",
+    projectDescription: "Fine-tuned BioBERT model for disease and chemical entity extraction, outperforming rule-based and BiLSTM-CRF models with 85.14% F1. Productionized via Flask API and React dashboard with live predictions and metrics.",
     projectTech: ["React", "Flask", "Python", "PyTorch", "Transformers", "BioBERT", "spaCy", "seqeval", "Recharts"],
     projectHighlights: [
       "Achieved 85.14% overall F1-score, with 89.75% F1 on chemical entities and 79.74% on diseases",
