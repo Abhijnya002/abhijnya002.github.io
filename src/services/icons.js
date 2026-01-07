@@ -44,12 +44,14 @@ import mysql from "../assets/img/icons/mysql.svg";
 import dynamodb from "../assets/img/icons/dynamodb.svg";
 import docker from "../assets/img/icons/docker.svg";
 import aws from "../assets/img/icons/aws.svg";
-import kubernetes from "../assets/img/icons/kubernetes.svg";
+// Kubernetes SVG has style tag issues - using fallback for now
+// import kubernetes from "../assets/img/icons/kubernetes.svg";
 import jenkins from "../assets/img/icons/jenkins.svg";
 import vscode from "../assets/img/icons/vscode.svg";
 import jira from "../assets/img/icons/jira.svg";
 import php from "../assets/img/icons/php.svg";
-import grafana from "../assets/img/icons/grafana.svg";
+// Grafana SVG has style tag issues - using fallback for now
+// import grafana from "../assets/img/icons/grafana.svg";
 import r from "../assets/img/icons/r.svg";
 import agile from "../assets/img/icons/agile.svg";
 
@@ -100,13 +102,13 @@ const icons = {
   dynamodb,
   docker,
   aws,
-  kubernetes,
+  kubernetes: linux, // Kubernetes SVG has style tag issues - using Linux icon as fallback
   jenkins,
   vscode,
   jira,
   php,
   git: github, // Git icon not added yet, using GitHub as fallback
-  grafana,
+  grafana: tableau, // Grafana SVG has style tag issues - using Tableau icon as fallback
   r,
   agile
 };
