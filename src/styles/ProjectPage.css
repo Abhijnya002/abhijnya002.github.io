@@ -7,11 +7,9 @@
   flex-direction: column; /* Ensure vertical stacking of child elements */
   align-items: center;
   justify-content: flex-start;
-  /* overflow: auto; Ensure the page scrolls */
-  /* height: auto; */
   min-height: calc(100vh - 52px);
-  /* max-height: calc(100dvh - 52px); */
-  background: transparent;
+  background-color: #212529; /* Fallback color */
+  overflow: hidden; /* Ensure SpotlightBG doesn't overflow */
   scroll-behavior: smooth;
   scrollbar-width: none;
   font-family: "Montserrat", sans-serif;

@@ -135,24 +135,6 @@ export const projectsData = [
 
 export const experienceData = [
   {
-    _id: "1",
-    experienceTitle: "Research Assistant",
-    experienceLink: "research-assistant-syracuse",
-    experienceCompany: "Syracuse University",
-    experienceLocation: "Syracuse, NY",
-    experiencePeriod: "Jan 2025 - May 2025",
-    experienceDescription: "Data and Research Engineer supporting data-driven policy research",
-    experienceHighlights: [
-      "Automated retrieval of large-scale datasets through REST APIs with pagination handling and rate-limit mitigation to ensure data completeness",
-      "Designed modular Python scripts for parsing JSON responses, transforming metadata, and exporting structured Excel/CSV outputs for faculty research workflows",
-      "Optimized end-to-end data pipelines with error handling, logging, and incremental updates, reducing processing overhead by 40%",
-      "Collaborated with interdisciplinary research teams to enable reproducible data analysis and policy-driven insights"
-    ],
-    experienceTech: ["Python", "REST APIs", "Data Processing", "Excel/CSV"],
-    experienceImagePath: "experienceTable/Research Assistant",
-    experienceYear: "2025"
-  },
-  {
     _id: "2",
     experienceTitle: "Data Analysis Engineer",
     experienceLink: "data-analysis-engineer-mercedes",
@@ -170,6 +152,24 @@ export const experienceData = [
     experienceTech: ["Python", "AWS", "PostgreSQL", "Power BI", "Grafana", "CI/CD", "Agile"],
     experienceImagePath: "experienceTable/Data Analysis Engineer",
     experienceYear: "2022-2024"
+  },
+  {
+    _id: "1",
+    experienceTitle: "Research Assistant",
+    experienceLink: "research-assistant-syracuse",
+    experienceCompany: "Syracuse University",
+    experienceLocation: "Syracuse, NY",
+    experiencePeriod: "Jan 2025 - May 2025",
+    experienceDescription: "Data and Research Engineer supporting data-driven policy research",
+    experienceHighlights: [
+      "Automated retrieval of large-scale datasets through REST APIs with pagination handling and rate-limit mitigation to ensure data completeness",
+      "Designed modular Python scripts for parsing JSON responses, transforming metadata, and exporting structured Excel/CSV outputs for faculty research workflows",
+      "Optimized end-to-end data pipelines with error handling, logging, and incremental updates, reducing processing overhead by 40%",
+      "Collaborated with interdisciplinary research teams to enable reproducible data analysis and policy-driven insights"
+    ],
+    experienceTech: ["Python", "REST APIs", "Data Processing", "Excel/CSV"],
+    experienceImagePath: "experienceTable/Research Assistant",
+    experienceYear: "2025"
   },
   {
     _id: "3",

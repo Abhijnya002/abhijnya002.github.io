@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { zoomIn } from "../../services/variants";
 import { fetchEducation } from "../../services/educationService";
+import { SpotlightBG } from "../AboutPage/SpotlightBG";
 import "../../styles/EducationPage.css";
 
 const scrollToSection = (id) => {
@@ -52,6 +53,7 @@ const EducationPage = ({ isBatterySavingOn, isWindowModalVisible }) => {
 
   return (
     <section className="education-container" id="education">
+      <SpotlightBG />
       <motion.div
         className="education-div"
         variants={isBatterySavingOn ? {} : zoomIn(0)}

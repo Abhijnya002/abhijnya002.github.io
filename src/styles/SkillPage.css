@@ -20,13 +20,8 @@
   scroll-snap-type: y mandatory;
   justify-content: center;
   height: calc(100vh - 52px);
-  /* background-image: url("../assets/img/background/about-bg.png"); */
-  /* background: linear-gradient(145deg, #212529, #181a1d); */
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-attachment: fixed;
+  background-color: #212529; /* Fallback color */
+  overflow: hidden; /* Ensure SpotlightBG doesn't overflow */
   scroll-behavior: smooth;
   background-position: center;
   font-family: "Montserrat", sans-serif;

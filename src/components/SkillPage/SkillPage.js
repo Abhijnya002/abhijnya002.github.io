@@ -5,6 +5,7 @@ import github from "../../assets/img/icons/github.png";
 import SkillBG from "./SkillBG.js";
 import SkillGraphCarousel from "./SkillGraph";
 import SkillSection from "./SkillSection";
+import { SpotlightBG } from "../AboutPage/SpotlightBG";
 import { fetchSkillsComponents } from "../../services/skillComponentService";
 import { Bar } from "react-chartjs-2";
 import {
@@ -387,9 +388,7 @@ function SkillPage({ isBatterySavingOn, isWindowModalVisible }) {
       id="skills"
       style={{ overflow: "hidden" }}
     >
-      {/* <SkillBG /> */}
-      {/* <EnhancedHexagonalGrid /> */}
-      {/* <SpotlightBG /> */}
+      <SpotlightBG />
       <motion.div
         className="skill-div"
         variants={isBatterySavingOn ? {} : zoomIn(0)}

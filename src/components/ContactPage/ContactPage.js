@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { styled, keyframes } from "@stitches/react";
 import Footer from "../SpecialComponents/Footer";
 import emailjs from "@emailjs/browser";
+import { SpotlightBG } from "../AboutPage/SpotlightBG";
 import "../../styles/ContactPage.css";
 
 function ContactPage({ isBatterySavingOn, addTab }) {
@@ -114,14 +115,8 @@ function ContactPage({ isBatterySavingOn, addTab }) {
           id="contact"
           className="contact-page"
           ref={containerRef}
-          style={{
-            backgroundImage: `url('${process.env.PUBLIC_URL}/contact-bg.webp')`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
         >
+          <SpotlightBG />
           <div className="contact-container">
             <div className="contact-div">
               <motion.h2

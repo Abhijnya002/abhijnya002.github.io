@@ -5,6 +5,7 @@ import Background from "./Background";
 import InvolvementTabPage from "./InvolvementTabPage";
 import CareerTabPage from "./CareerTabPage";
 import HonorsTabPage from "./HonorsTabPage";
+import { SpotlightBG } from "../AboutPage/SpotlightBG";
 import "../../styles/ExperiencePage.css";
 
 const tabs = [
@@ -92,7 +93,7 @@ const ExperiencePage = ({
     <>
       <AnimatePresence>
         <section className="experience-container" id="experience">
-          {/* <Background /> */}
+          <SpotlightBG />
           <motion.div
             className="experience-div"
             variants={isBatterySavingOn ? {} : zoomIn(0)}

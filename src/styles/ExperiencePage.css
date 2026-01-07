@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: center;
   height: calc(100vh - 52px);
-  /* background: linear-gradient(145deg, #212529, #181a1d); */
+  background-color: #212529; /* Fallback color */
+  overflow: hidden; /* Ensure SpotlightBG doesn't overflow */
   color: #edeeef;
   font-family: "Montserrat", sans-serif;
   z-index: 1;

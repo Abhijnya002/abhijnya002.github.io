@@ -8,6 +8,7 @@
   font-family: "Montserrat", sans-serif;
   color: #edeeef;
   padding: 40px 20px;
+  overflow: hidden; /* Ensure SpotlightBG doesn't overflow */
 }
 
 .education-div {
