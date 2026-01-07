@@ -160,21 +160,10 @@ const ExperiencePage = ({
               exit="hidden"
               viewport={{ once: true }}
             >
-              {/* Display all three sections by default */}
-              <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "40px" }}>
-                <InvolvementTabPage
-                  addTab={addTab}
-                  isBatterySavingOn={isBatterySavingOn}
-                />
-                <CareerTabPage
-                  addTab={addTab}
-                  isBatterySavingOn={isBatterySavingOn}
-                />
-                <HonorsTabPage
-                  addTab={addTab}
-                  isBatterySavingOn={isBatterySavingOn}
-                />
-              </div>
+              <ActiveComponent
+                addTab={addTab}
+                isBatterySavingOn={isBatterySavingOn}
+              />
             </motion.div>
           </motion.div>
         </section>
