@@ -58,7 +58,8 @@ const CareerTabPage = ({ addTab, isBatterySavingOn }) => {
     const getExperiences = async () => {
       try {
         const data = await fetchExperiences();
-        setExperiences(data.reverse());
+        // Data is already sorted with Data Analysis Engineer first in portfolioData.js
+        setExperiences(data);
       } catch (error) {
         console.error("Error fetching experiences:", error);
       }
