@@ -165,9 +165,9 @@
 
 .project-image {
   margin: 20px 0px 20px 20px;
-  flex: 1.5; /* Increased flex ratio for wider images */
-  min-width: 350px; /* Increased minimum width */
-  max-width: 500px; /* Increased maximum width for broader horizontal size */
+  flex: 2; /* Further increased flex ratio for even wider images */
+  min-width: 400px; /* Further increased minimum width */
+  max-width: 600px; /* Further increased maximum width for broader horizontal size */
   width: 100%;
   height: 0;
   padding-bottom: 35%; /* Maintain aspect ratio */
@@ -221,11 +221,11 @@
   }
 
   .project-image {
-    flex: 1.5; /* Increased flex ratio for wider images */
+    flex: 2; /* Further increased flex ratio for even wider images */
     margin: 20px 0 20px 20px;
     width: 100%;
-    min-width: 320px;
-    max-width: 450px; /* Increased max-width for broader images */
+    min-width: 380px;
+    max-width: 550px; /* Further increased max-width for broader images */
     padding-bottom: 35%; /* Maintain aspect ratio */
   }
 }
