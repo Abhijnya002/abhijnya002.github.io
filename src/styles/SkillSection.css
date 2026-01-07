@@ -6,7 +6,7 @@
   margin: 0 auto;
   width: min(100%, 1140px);
   text-align: center;
-  overflow: visible;
+  overflow: hidden; /* Hide adjacent cards */
   cursor: normal !important;
 }
 
@@ -329,4 +329,17 @@
 }
 
 @media (max-width: 480px) {
+}
+
+/* Hide adjacent cards in carousel */
+.glide__track {
+  overflow: hidden;
+}
+
+.glide__slides {
+  overflow: hidden;
+}
+
+.glide__slide {
+  overflow: hidden;
 }

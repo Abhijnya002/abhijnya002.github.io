@@ -192,7 +192,7 @@ const SkillSection = ({ isBatterySavingOn }) => {
       perView: 1,
       gap: 0,
       autoplay: autoplay ? 4000 : false,
-      peek: isMediumWidth ? 50 : isSmallWidth ? 0 : 100,
+      peek: 0, // No peek - only one card visible at a time
       responsive: true,
       rewind: true,
     });
