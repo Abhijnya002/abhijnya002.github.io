@@ -36,6 +36,24 @@ import french from "../assets/img/icons/french.svg";
 import arabic from "../assets/img/icons/arabic.png";
 import github from "../assets/img/icons/github.svg";
 import dsa from "../assets/img/icons/dsa.svg";
+import html from "../assets/img/icons/html.svg";
+import django from "../assets/img/icons/django.svg";
+
+// Note: The following icons need to be added to src/assets/img/icons/:
+// - postgresql.svg (PostgreSQL elephant logo)
+// - mysql.svg (MySQL logo)
+// - dynamodb.svg (DynamoDB logo)
+// - docker.svg (Docker whale logo)
+// - aws.svg (AWS logo)
+// - kubernetes.svg (Kubernetes logo)
+// - jenkins.svg (Jenkins logo)
+// - vscode.svg (VS Code logo)
+// - jira.svg (Jira logo)
+// - php.svg (PHP logo)
+// - git.svg (Git logo - different from GitHub)
+// - grafana.svg (Grafana logo)
+// - r.svg (R logo)
+// - agile.svg (Agile/Scrum logo)
 
 const icons = {
   javascript,
@@ -75,7 +93,24 @@ const icons = {
   french,
   arabic,
   github,
-  dsa, // Data Structures & Algorithms icon
+  dsa,
+  html,
+  django,
+  // Temporary fallbacks until icon files are added
+  postgresql: sql, // Will use PostgreSQL icon when added
+  mysql: sql, // Will use MySQL icon when added
+  dynamodb: mongodb, // Will use DynamoDB icon when added
+  docker: linux, // Will use Docker icon when added
+  aws: linux, // Will use AWS icon when added
+  kubernetes: linux, // Will use Kubernetes icon when added
+  jenkins: javascript, // Will use Jenkins icon when added
+  vscode: javascript, // Will use VS Code icon when added
+  jira: javascript, // Will use Jira icon when added
+  php: javascript, // Will use PHP icon when added
+  git: github, // Will use Git icon when added
+  grafana: tableau, // Will use Grafana icon when added
+  r: python, // Will use R icon when added
+  agile: javascript, // Will use Agile icon when added
 };
 
 export default icons;

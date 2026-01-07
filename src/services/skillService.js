@@ -11,15 +11,21 @@ const levelToProficiency = (level) => {
 // Uses available icons from icons.js, falls back to similar icons
 const getSkillLogo = (skillName) => {
   const logoMap = {
+    // Languages
     "Python": "python",
     "SQL": "sql",
     "JavaScript": "javascript",
     "TypeScript": "typescript",
     "Java": "java",
     "C++": "cpp",
-    "HTML/CSS": "css", // CSS icon for HTML/CSS
-    "HTML": "css",
+    "HTML/CSS": "html", // Use HTML icon for HTML/CSS combo
+    "HTML": "html",
     "CSS": "css",
+    "PHP": "php",
+    "Data Structures": "dsa",
+    "Algorithms": "cpp",
+    
+    // Frameworks
     "React.js": "react",
     "React": "react",
     "Node.js": "nodejs",
@@ -27,34 +33,36 @@ const getSkillLogo = (skillName) => {
     "Express": "express",
     "Flask": "flask",
     "Angular": "angular",
-    "Django": "python", // Use python icon for Django
-    "Bootstrap": "css", // Use CSS icon for Bootstrap
+    "Django": "django",
+    "Bootstrap": "css",
     "TensorFlow": "tensorflow",
-    "CNN": "tensorflow", // Use tensorflow for CNN
-    "PostgreSQL": "sql", // PostgreSQL uses SQL icon
-    "MySQL": "sql",
+    "CNN": "tensorflow",
+    "Agile": "agile",
+    
+    // Databases
+    "PostgreSQL": "postgresql",
+    "MySQL": "mysql",
     "MongoDB": "mongodb",
-    "DynamoDB": "mongodb", // DynamoDB uses MongoDB icon
-    "Power BI": "powerbi",
-    "Grafana": "tableau", // Grafana uses Tableau icon (similar visualization tool)
-    "Tableau": "tableau",
-    "R": "python", // Use python icon for R
-    "Git": "github", // Use GitHub icon for Git
-    "GitHub": "github", // Use GitHub icon
-    "VS Code": "javascript", // VS Code uses JavaScript icon
-    "Docker": "linux", // Docker uses Linux icon
-    "AWS": "linux", // AWS uses Linux icon
-    "Kubernetes": "linux", // Kubernetes uses Linux icon
-    "Jenkins": "javascript", // Jenkins uses JavaScript icon
+    "DynamoDB": "dynamodb",
+    
+    // Developer Tools
+    "Git": "git",
+    "GitHub": "github",
+    "VS Code": "vscode",
+    "Docker": "docker",
+    "AWS": "aws",
+    "Kubernetes": "kubernetes",
+    "Jenkins": "jenkins",
     "Linux": "linux",
     "Unix": "linux",
-    "Jira": "javascript", // Jira uses JavaScript icon
+    "Jira": "jira",
     "Excel": "ms_office",
-    "PHP": "javascript", // PHP uses JavaScript icon
-    "Data Structures": "dsa", // Data Structures uses DSA icon
-    "Algorithms": "cpp", // Algorithms uses C++ icon (algorithmic thinking)
-    "Agile": "javascript", // Agile uses JavaScript icon
-    "CAD": "javascript"
+    
+    // Data Visualization
+    "Power BI": "powerbi",
+    "Grafana": "grafana",
+    "Tableau": "tableau",
+    "R": "r",
   };
   return logoMap[skillName] || "javascript"; // Default to javascript if not found
 };
