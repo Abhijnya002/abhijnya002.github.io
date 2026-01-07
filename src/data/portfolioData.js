@@ -204,8 +204,8 @@ export const skillsData = {
     { name: "C++", level: 80 }, // Listed in skills
     { name: "HTML/CSS", level: 90 }, // Frontend development experience
     { name: "PHP", level: 75 }, // Listed but less emphasis
-    { name: "Groovy", level: 70 }, // Listed but less emphasis
-    { name: "Data Structures & Algorithms", level: 95 } // Strong CS background (3.9/4 GPA) - Combined
+    { name: "Data Structures", level: 95 }, // Strong CS background (3.9/4 GPA) - Split
+    { name: "Algorithms", level: 95 } // Strong CS background (3.9/4 GPA) - Split
   ],
   databases: [
     { name: "PostgreSQL", level: 95 }, // Professional use: 2+ years, data pipelines, 99.9% quality
@@ -251,7 +251,7 @@ export const skillComponentsData = [
   {
     _id: "1",
     skillComponentName: "Languages",
-    skillComponentSkills: ["C++", "Java", "Python", "SQL", "HTML/CSS", "JavaScript", "PHP", "Groovy", "Data Structures & Algorithms"],
+    skillComponentSkills: ["C++", "Java", "Python", "SQL", "HTML/CSS", "JavaScript", "PHP", "Data Structures", "Algorithms"],
     skillComponentColor: "#fcbc1d"
   },
   {

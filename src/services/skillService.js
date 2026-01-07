@@ -31,31 +31,29 @@ const getSkillLogo = (skillName) => {
     "Bootstrap": "css", // Use CSS icon for Bootstrap
     "TensorFlow": "tensorflow",
     "CNN": "tensorflow", // Use tensorflow for CNN
-    "PostgreSQL": "sql",
+    "PostgreSQL": "sql", // PostgreSQL uses SQL icon
     "MySQL": "sql",
     "MongoDB": "mongodb",
-    "DynamoDB": "mongodb", // Use mongodb icon for DynamoDB
+    "DynamoDB": "mongodb", // DynamoDB uses MongoDB icon
     "Power BI": "powerbi",
-    "Grafana": "tableau", // Use tableau as similar visualization tool
+    "Grafana": "tableau", // Grafana uses Tableau icon (similar visualization tool)
     "Tableau": "tableau",
     "R": "python", // Use python icon for R
     "Git": "github", // Use GitHub icon for Git
     "GitHub": "github", // Use GitHub icon
-    "VS Code": "javascript", // VS Code icon - using javascript as fallback (VS Code uses JS-based UI)
-    "Docker": "linux", // Docker runs on Linux, use linux icon
-    "AWS": "linux", // AWS cloud icon - use linux as fallback
-    "Kubernetes": "linux", // Kubernetes icon - use linux as fallback
-    "Jenkins": "javascript", // Jenkins icon - use javascript as fallback
+    "VS Code": "javascript", // VS Code uses JavaScript icon
+    "Docker": "linux", // Docker uses Linux icon
+    "AWS": "linux", // AWS uses Linux icon
+    "Kubernetes": "linux", // Kubernetes uses Linux icon
+    "Jenkins": "javascript", // Jenkins uses JavaScript icon
     "Linux": "linux",
     "Unix": "linux",
-    "Jira": "javascript", // Jira icon - use javascript as fallback
+    "Jira": "javascript", // Jira uses JavaScript icon
     "Excel": "ms_office",
-    "PHP": "javascript",
-    "Groovy": "javascript",
-    "Data Structures & Algorithms": "dsa", // Use DSA icon
-    "Data Structures": "dsa", // Use DSA icon
-    "Algorithms": "dsa", // Use DSA icon
-    "Agile": "javascript",
+    "PHP": "javascript", // PHP uses JavaScript icon
+    "Data Structures": "dsa", // Data Structures uses DSA icon
+    "Algorithms": "cpp", // Algorithms uses C++ icon (algorithmic thinking)
+    "Agile": "javascript", // Agile uses JavaScript icon
     "CAD": "javascript"
   };
   return logoMap[skillName] || "javascript"; // Default to javascript if not found
