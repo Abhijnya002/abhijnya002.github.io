@@ -165,17 +165,17 @@
 
 .project-image {
   margin: 20px 0px 20px 20px;
-  flex: 1; /* Smaller flex ratio for image */
-  min-width: 350px; /* Minimum width */
-  max-width: 450px; /* Maximum width for landscape images */
+  flex: 1; /* Smaller flex ratio for image - matching Kartavya's style */
+  min-width: 280px; /* Smaller minimum width */
+  max-width: 360px; /* Smaller maximum width - more compact like Kartavya's */
   width: 100%;
   height: 0;
-  padding-bottom: 52.41%; /* 566/1080 = 0.5241 (1080x566px landscape aspect ratio) */
+  padding-bottom: 62.5%; /* 5:8 aspect ratio for more compact landscape images */
   position: relative;
   border-radius: 12px; /* Match card's border-radius */
-  overflow: visible; /* Allow shadow to be visible */
+  overflow: hidden; /* Keep image contained */
   background-color: rgba(0, 0, 0, 0.95); /* Dark background matching image shadow */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
 .project-image img {
@@ -190,7 +190,7 @@
 }
 
 .project-image[style*="background-image"] {
-  background-size: contain !important; /* Show full image without cropping */
+  background-size: cover !important; /* Fill container - matching Kartavya's style */
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-color: rgba(0, 0, 0, 0.95); /* Dark background matching image shadow area */
@@ -222,9 +222,9 @@
     flex: 1; /* Prevent flex shrink issues */
     margin: 20px 0 20px 20px;
     width: 100%;
-    min-width: 280px;
-    max-width: 350px;
-    padding-bottom: 52.41%; /* Maintain 1080x566px landscape aspect ratio */
+    min-width: 240px;
+    max-width: 300px;
+    padding-bottom: 62.5%; /* Maintain 5:8 aspect ratio */
   }
 }
 
@@ -247,7 +247,7 @@
     max-width: 100%;
     min-width: auto;
     height: 0;
-    padding-bottom: 52.41%; /* Maintain 1080x566px landscape aspect ratio */
+    padding-bottom: 62.5%; /* Maintain 5:8 aspect ratio */
   }
 }
 
@@ -263,7 +263,7 @@
     max-width: 100%;
     min-width: auto;
     height: 0;
-    padding-bottom: 52.41%; /* Maintain 1080x566px landscape aspect ratio */
+    padding-bottom: 62.5%; /* Maintain 5:8 aspect ratio */
     margin: 20px 0 0;
   }
 }

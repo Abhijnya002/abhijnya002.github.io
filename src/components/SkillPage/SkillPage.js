@@ -288,12 +288,13 @@ function SkillPage({ isBatterySavingOn, isWindowModalVisible }) {
       const url = `${process.env.REACT_APP_API_URI}/github-stats/top-langs`;
 
       // Fallback data if fetch fails or returns nothing
+      // Ordered: Java (lowest) -> C++ -> HTML/CSS -> SQL -> Python (highest)
       const fallbackLangJson = {
-        JavaScript: "33.06%",
-        Python: "32.19%",
-        HTML: "14.98%",
-        "C++": "8.53%",
-        CSS: "7.12%",
+        Java: "8%",
+        "C++": "12%",
+        "HTML/CSS": "18%",
+        SQL: "25%",
+        Python: "37%",
       };
 
       try {

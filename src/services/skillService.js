@@ -16,20 +16,46 @@ const getSkillLogo = (skillName) => {
     "JavaScript": "javascript",
     "TypeScript": "typescript",
     "Java": "java",
+    "C++": "cpp",
+    "HTML/CSS": "css", // CSS icon for HTML/CSS
+    "HTML": "css",
+    "CSS": "css",
+    "React.js": "react",
     "React": "react",
     "Node.js": "nodejs",
+    "Express.js": "express",
     "Express": "express",
-    "AWS": "linux", // Use linux icon as AWS runs on Linux
-    "PostgreSQL": "sql", // Use SQL icon for PostgreSQL
+    "Flask": "flask",
+    "Angular": "angular",
+    "Django": "python", // Use python icon for Django
+    "Bootstrap": "css", // Use CSS icon for Bootstrap
+    "TensorFlow": "tensorflow",
+    "CNN": "tensorflow", // Use tensorflow for CNN
+    "PostgreSQL": "sql",
+    "MySQL": "sql",
+    "MongoDB": "mongodb",
+    "DynamoDB": "mongodb", // Use mongodb icon for DynamoDB
     "Power BI": "powerbi",
     "Grafana": "tableau", // Use tableau as similar visualization tool
-    "Git": "linux", // Use linux icon for git
-    "Docker": "linux", // Use linux icon for docker
-    "Data Analysis": "python", // Use python for data analysis
-    "Machine Learning": "tensorflow", // Use tensorflow for ML
-    "Cloud Computing": "linux", // Use linux for cloud
-    "Agile": "javascript", // Default fallback
-    "CI/CD": "javascript" // Default fallback
+    "Tableau": "tableau",
+    "R": "python", // Use python icon for R
+    "Git": "javascript", // Use javascript icon as fallback
+    "GitHub": "javascript",
+    "VS Code": "javascript",
+    "Docker": "javascript",
+    "AWS": "javascript",
+    "Kubernetes": "javascript",
+    "Jenkins": "javascript",
+    "Linux": "linux",
+    "Unix": "linux",
+    "Jira": "javascript",
+    "Excel": "ms_office",
+    "PHP": "javascript",
+    "Groovy": "javascript",
+    "Data Structures": "cpp", // Use C++ icon for data structures
+    "Algorithms": "cpp", // Use C++ icon for algorithms
+    "Agile": "javascript",
+    "CAD": "javascript"
   };
   return logoMap[skillName] || "javascript"; // Default to javascript if not found
 };
