@@ -6,24 +6,6 @@ import "../../styles/AboutPage.css";
 import { SpotlightBG } from "./SpotlightBG";
 import Resume from "../../assets/Resume-AbhijnyaKg.pdf";
 
-const aboutData = [
-  {
-    icon: "bx bxs-hourglass about-icon",
-    title: "Coding Hours",
-    subtitle: "1300+ Hours",
-  },
-  {
-    icon: "bx bx-trophy about-icon",
-    title: "Completed",
-    subtitle: "42+ Projects",
-  },
-  {
-    icon: "bx bx-support about-icon",
-    title: "LeetCode",
-    subtitle: "246+ Solutions",
-  },
-];
-
 function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
   useEffect(() => {
     const updateScale = () => {
@@ -88,26 +70,6 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
                 whileInView="show"
                 exit="hidden"
               />
-              <motion.div
-                className="about-info"
-                variants={isBatterySavingOn ? {} : zoomIn(0)}
-                initial="hidden"
-                whileInView="show"
-                exit="hidden"
-              >
-                {aboutData.map((item, index) => (
-                  <motion.div
-                    className="about-box"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.99 }}
-                    key={index}
-                  >
-                    <motion.i className={item.icon}></motion.i>
-                    <h3 className="about-title">{item.title}</h3>
-                    <span className="about-subtitle">{item.subtitle}</span>
-                  </motion.div>
-                ))}
-              </motion.div>
             </motion.div>
             <motion.div className="about-row">
               <motion.div
