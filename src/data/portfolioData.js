@@ -2,63 +2,6 @@
 
 export const projectsData = [
   {
-    _id: "1",
-    projectTitle: "Healthcare Named Entity Recognition System",
-    projectLink: "healthcare-ner",
-    projectDescription: "Developed an end-to-end Named Entity Recognition system using BioBERT to extract disease and chemical entities from biomedical text, outperforming rule-based and BiLSTM-CRF baselines. Built a complete ML pipeline including preprocessing, baseline modeling, transformer fine-tuning, and precision/recall/F1 evaluation. Productionized the model using a Flask REST API and integrated a React dashboard featuring live predictions, confusion matrices, and interactive visual analytics.",
-    projectTech: ["Python", "PyTorch", "BioBERT", "Flask", "React", "Transformers", "spaCy", "Recharts"],
-    projectHighlights: [
-      "AI-powered biomedical NER system using BioBERT to extract disease and chemical entities",
-      "Outperformed rule-based and BiLSTM-CRF baselines with complete ML pipeline",
-      "Productionized using Flask REST API with React dashboard for real-time analytics",
-      "Interactive visualizations including confusion matrices and live predictions"
-    ],
-    projectGitHubLink: "https://github.com/Abhijnya002/Named-Entity-Recognition-for-Medical-Text",
-    projectDemoLink: "https://medical-ner-dashboard.vercel.app/",
-    projectImagePath: "projectTable/Healthcare Named Entity Recognition System",
-    projectYear: "2025",
-    projectPeriod: "Oct 2025 – Nov 2025",
-    featured: true
-  },
-  {
-    _id: "2",
-    projectTitle: "IoT Attack Detection & Visualization System",
-    projectLink: "iot-attack-detection",
-    projectDescription: "Built an intrusion detection system for IoT networks using the CICIDS2017 dataset, evaluating multiple ML models including Random Forest, SVM, CNN, LSTM, and Autoencoders. Identified Random Forest as the most effective model for tabular IoT data and applied SHAP explainability to highlight attack-driving features. Developed an interactive dashboard to visualize model performance, confusion matrices, and feature importance, supporting deployment and security analysis decisions.",
-    projectTech: ["Python", "Machine Learning", "Random Forest", "SHAP", "CICIDS2017", "Data Visualization"],
-    projectHighlights: [
-      "Machine learning–based IoT intrusion detection system with explainable AI",
-      "Evaluated multiple ML models (Random Forest, SVM, CNN, LSTM, Autoencoders)",
-      "Applied SHAP explainability to highlight attack-driving features",
-      "Interactive dashboard for model performance and feature importance visualization"
-    ],
-    projectGitHubLink: "https://github.com/Abhijnya002/IOT-attack-detection-and-visualization-system",
-    projectDemoLink: "",
-    projectImagePath: "projectTable/IoT Attack Detection & Visualization System",
-    projectYear: "2025",
-    projectPeriod: "Feb 2025 – Apr 2025",
-    featured: true
-  },
-  {
-    _id: "3",
-    projectTitle: "AI-Powered Website Cloner",
-    projectLink: "ai-powered-web-cloner",
-    projectDescription: "Developed a website cloning tool that scrapes HTML/CSS context from public websites and regenerates layouts using LLMs. Implemented browser-based scraping with Playwright to handle JavaScript-heavy pages and orchestrated backend processing using FastAPI. Built a responsive Next.js interface with live iframe previews, raw HTML inspection, dark/light mode, and smooth loading animations for an intuitive user experience.",
-    projectTech: ["Next.js", "TypeScript", "FastAPI", "Python", "Playwright", "LLM", "Tailwind CSS"],
-    projectHighlights: [
-      "Full-stack AI tool that clones public websites by scraping and regenerating layouts using LLMs",
-      "Browser-based scraping with Playwright for JavaScript-heavy pages",
-      "Responsive Next.js interface with live iframe previews and dark/light mode",
-      "Smooth loading animations and intuitive user experience"
-    ],
-    projectGitHubLink: "https://github.com/Abhijnya002/Web-cloner",
-    projectDemoLink: "",
-    projectImagePath: "projectTable/AI-Powered Website Cloner",
-    projectYear: "2025",
-    projectPeriod: "Aug 2025 – Sep 2025",
-    featured: true
-  },
-  {
     _id: "4",
     projectTitle: "AI-Powered Data Extraction & Structuring",
     projectLink: "ai-powered-data-extraction",
@@ -75,7 +18,28 @@ export const projectsData = [
     projectImagePath: "projectTable/AI-Powered Data Extraction & Structuring",
     projectYear: "2025",
     projectPeriod: "Feb 2025 – Apr 2025",
-    featured: true
+    featured: true,
+    displayOrder: 1
+  },
+  {
+    _id: "1",
+    projectTitle: "Healthcare Named Entity Recognition System",
+    projectLink: "healthcare-ner",
+    projectDescription: "Developed an end-to-end Named Entity Recognition system using BioBERT to extract disease and chemical entities from biomedical text, outperforming rule-based and BiLSTM-CRF baselines. Built a complete ML pipeline including preprocessing, baseline modeling, transformer fine-tuning, and precision/recall/F1 evaluation. Productionized the model using a Flask REST API and integrated a React dashboard featuring live predictions, confusion matrices, and interactive visual analytics.",
+    projectTech: ["Python", "PyTorch", "BioBERT", "Flask", "React", "Transformers", "spaCy", "Recharts"],
+    projectHighlights: [
+      "AI-powered biomedical NER system using BioBERT to extract disease and chemical entities",
+      "Outperformed rule-based and BiLSTM-CRF baselines with complete ML pipeline",
+      "Productionized using Flask REST API with React dashboard for real-time analytics",
+      "Interactive visualizations including confusion matrices and live predictions"
+    ],
+    projectGitHubLink: "https://github.com/Abhijnya002/Named-Entity-Recognition-for-Medical-Text",
+    projectDemoLink: "https://medical-ner-dashboard.vercel.app/",
+    projectImagePath: "projectTable/Healthcare Named Entity Recognition System",
+    projectYear: "2025",
+    projectPeriod: "Oct 2025 – Nov 2025",
+    featured: true,
+    displayOrder: 2
   },
   {
     _id: "5",
@@ -94,7 +58,48 @@ export const projectsData = [
     projectImagePath: "projectTable/Threat Intelligence Dashboard",
     projectYear: "2025",
     projectPeriod: "Apr 2025 – May 2025",
-    featured: true
+    featured: true,
+    displayOrder: 3
+  },
+  {
+    _id: "3",
+    projectTitle: "AI-Powered Website Cloner",
+    projectLink: "ai-powered-web-cloner",
+    projectDescription: "Developed a website cloning tool that scrapes HTML/CSS context from public websites and regenerates layouts using LLMs. Implemented browser-based scraping with Playwright to handle JavaScript-heavy pages and orchestrated backend processing using FastAPI. Built a responsive Next.js interface with live iframe previews, raw HTML inspection, dark/light mode, and smooth loading animations for an intuitive user experience.",
+    projectTech: ["Next.js", "TypeScript", "FastAPI", "Python", "Playwright", "LLM", "Tailwind CSS"],
+    projectHighlights: [
+      "Full-stack AI tool that clones public websites by scraping and regenerating layouts using LLMs",
+      "Browser-based scraping with Playwright for JavaScript-heavy pages",
+      "Responsive Next.js interface with live iframe previews and dark/light mode",
+      "Smooth loading animations and intuitive user experience"
+    ],
+    projectGitHubLink: "https://github.com/Abhijnya002/Web-cloner",
+    projectDemoLink: "",
+    projectImagePath: "projectTable/AI-Powered Website Cloner",
+    projectYear: "2025",
+    projectPeriod: "Aug 2025 – Sep 2025",
+    featured: true,
+    displayOrder: 4
+  },
+  {
+    _id: "2",
+    projectTitle: "IoT Attack Detection & Visualization System",
+    projectLink: "iot-attack-detection",
+    projectDescription: "Built an intrusion detection system for IoT networks using the CICIDS2017 dataset, evaluating multiple ML models including Random Forest, SVM, CNN, LSTM, and Autoencoders. Identified Random Forest as the most effective model for tabular IoT data and applied SHAP explainability to highlight attack-driving features. Developed an interactive dashboard to visualize model performance, confusion matrices, and feature importance, supporting deployment and security analysis decisions.",
+    projectTech: ["Python", "Machine Learning", "Random Forest", "SHAP", "CICIDS2017", "Data Visualization"],
+    projectHighlights: [
+      "Machine learning–based IoT intrusion detection system with explainable AI",
+      "Evaluated multiple ML models (Random Forest, SVM, CNN, LSTM, Autoencoders)",
+      "Applied SHAP explainability to highlight attack-driving features",
+      "Interactive dashboard for model performance and feature importance visualization"
+    ],
+    projectGitHubLink: "https://github.com/Abhijnya002/IOT-attack-detection-and-visualization-system",
+    projectDemoLink: "",
+    projectImagePath: "projectTable/IoT Attack Detection & Visualization System",
+    projectYear: "2025",
+    projectPeriod: "Feb 2025 – Apr 2025",
+    featured: true,
+    displayOrder: 5
   }
 ];
 

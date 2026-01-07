@@ -90,14 +90,14 @@ const parseProjectDate = (project) => {
   return new Date(2000, 0);
 };
 
-// Fetch all projects, sorted by date (latest first)
+// Fetch all projects, sorted by displayOrder (custom order)
 export const fetchProjects = async () => {
   const transformed = projectsData.map(transformProjectImages);
-  // Sort by date in descending order (latest first)
+  // Sort by displayOrder if available, otherwise maintain array order
   return transformed.sort((a, b) => {
-    const dateA = parseProjectDate(a);
-    const dateB = parseProjectDate(b);
-    return dateB - dateA; // Descending order
+    const orderA = a.displayOrder || 999;
+    const orderB = b.displayOrder || 999;
+    return orderA - orderB; // Ascending order by displayOrder
   });
 };
 
