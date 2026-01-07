@@ -8,12 +8,11 @@ import ProjectsListView from "./ProjectsListView";
 
 function ProjectPage({ addTab, isBatterySavingOn, isWindowModalVisible }) {
   const [showFeatured, setShowFeatured] = useState(false);
-  
   return (
-    <motion.section 
-      className="project-page-container" 
-      id="projects"
-    >
+    <motion.section className="project-page-container" id="projects">
+      {/* <div className="gradient-bg-container">
+        <GradientBG />
+      </div> */}
       <motion.div
         className="project-page-div"
         style={
