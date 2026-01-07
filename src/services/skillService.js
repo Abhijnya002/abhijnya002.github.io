@@ -39,21 +39,22 @@ const getSkillLogo = (skillName) => {
     "Grafana": "tableau", // Use tableau as similar visualization tool
     "Tableau": "tableau",
     "R": "python", // Use python icon for R
-    "Git": "javascript", // Use javascript icon as fallback
-    "GitHub": "javascript",
-    "VS Code": "javascript",
-    "Docker": "javascript",
-    "AWS": "javascript",
-    "Kubernetes": "javascript",
-    "Jenkins": "javascript",
+    "Git": "github", // Use GitHub icon for Git
+    "GitHub": "github", // Use GitHub icon
+    "VS Code": "javascript", // VS Code icon - using javascript as fallback (VS Code uses JS-based UI)
+    "Docker": "linux", // Docker runs on Linux, use linux icon
+    "AWS": "linux", // AWS cloud icon - use linux as fallback
+    "Kubernetes": "linux", // Kubernetes icon - use linux as fallback
+    "Jenkins": "javascript", // Jenkins icon - use javascript as fallback
     "Linux": "linux",
     "Unix": "linux",
-    "Jira": "javascript",
+    "Jira": "javascript", // Jira icon - use javascript as fallback
     "Excel": "ms_office",
     "PHP": "javascript",
     "Groovy": "javascript",
-    "Data Structures": "cpp", // Use C++ icon for data structures
-    "Algorithms": "cpp", // Use C++ icon for algorithms
+    "Data Structures & Algorithms": "dsa", // Use DSA icon
+    "Data Structures": "dsa", // Use DSA icon
+    "Algorithms": "dsa", // Use DSA icon
     "Agile": "javascript",
     "CAD": "javascript"
   };

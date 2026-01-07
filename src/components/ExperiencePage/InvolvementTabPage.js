@@ -109,7 +109,7 @@ const InvolvementTabPage = ({ addTab, isBatterySavingOn }) => {
       exit="hidden"
       viewport={{ once: true }}
     >
-      <h1 className="career-tab-header">My Involvements</h1>
+      <h1 className="career-tab-header">My Certifications</h1>
       <div className="career-tabs-slider">
         {/* Slide container with advanced swipe support */}
         <motion.div

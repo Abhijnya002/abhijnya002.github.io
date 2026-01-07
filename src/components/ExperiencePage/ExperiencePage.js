@@ -10,8 +10,8 @@ import "../../styles/ExperiencePage.css";
 
 const tabs = [
   {
-    title: "Involvement",
-    icon: <i className="tab-icon fa-solid fa-handshake" />,
+    title: "Certification",
+    icon: <i className="tab-icon fa-solid fa-certificate" />,
     component: InvolvementTabPage,
   },
   {

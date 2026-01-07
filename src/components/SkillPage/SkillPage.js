@@ -289,12 +289,13 @@ function SkillPage({ isBatterySavingOn, isWindowModalVisible }) {
 
       // Fallback data if fetch fails or returns nothing
       // Ordered: Java (lowest) -> C++ -> HTML/CSS -> SQL -> Python (highest)
+      // SQL: 400 coding hours out of total
       const fallbackLangJson = {
         Java: "8%",
         "C++": "12%",
         "HTML/CSS": "18%",
-        SQL: "25%",
-        Python: "37%",
+        SQL: "30.77%", // ~400 hours out of 1300 total
+        Python: "31.23%",
       };
 
       try {

@@ -2,6 +2,44 @@
 
 export const projectsData = [
   {
+    _id: "0",
+    projectTitle: "PersonaForge: Where Voice Meets AI",
+    projectLink: "personaforge",
+    projectDescription: "Spearheaded a Windows desktop voice assistant using Electron, React/TypeScript (Vite), Node.js, Electron IPC + pre-load, and Web Audio (AudioWorklet); integrated ElevenLabs (STT/TTS) with Gemini/OpenAI; implemented a 4-stage real-time loop and an executor framework for 8 core OS actions. Awarded Best Use of AI Using ElevenLabs at MakeUC Hackathon 2025.",
+    projectTech: ["Electron", "React", "TypeScript", "Node.js", "ElevenLabs", "Gemini", "OpenAI", "Web Audio API"],
+    projectHighlights: [
+      "Built Windows desktop voice assistant with Electron and React/TypeScript",
+      "Integrated ElevenLabs STT/TTS with Gemini/OpenAI for intelligent voice interactions",
+      "Implemented 4-stage real-time loop and executor framework for 8 core OS actions",
+      "Won Best Use of AI Using ElevenLabs at MakeUC Hackathon 2025"
+    ],
+    projectGitHubLink: "https://github.com/Kartavya904/PersonaForge",
+    projectDemoLink: "",
+    projectImagePath: "projectTable/PersonaForge",
+    projectYear: "2025",
+    projectPeriod: "Nov 2025",
+    featured: true
+  },
+  {
+    _id: "00",
+    projectTitle: "My AI Companion",
+    projectLink: "my-ai-companion",
+    projectDescription: "An AI chatbot inspired by Baymax from Big Hero 6, designed to provide motivation, guidance, and support for living a fulfilling life. Built with advanced conversational AI capabilities, the companion offers personalized advice, emotional support, and daily motivation through natural language interactions.",
+    projectTech: ["AI", "Machine Learning", "NLP", "Conversational AI"],
+    projectHighlights: [
+      "AI-powered chatbot providing motivation and guidance",
+      "Inspired by Baymax from Big Hero 6 for friendly, supportive interactions",
+      "Personalized advice and emotional support through natural language",
+      "Advanced conversational AI capabilities for meaningful interactions"
+    ],
+    projectGitHubLink: "https://github.com/Kartavya904/Kartavya-Portfolio-MERN",
+    projectDemoLink: "",
+    projectImagePath: "projectTable/My AI Companion",
+    projectYear: "2025",
+    projectPeriod: "2025",
+    featured: true
+  },
+  {
     _id: "1",
     projectTitle: "IoT Environmental Monitoring System",
     projectLink: "iot-environmental-monitoring",
@@ -216,7 +254,54 @@ export const honorsExperienceData = [
 ];
 
 export const involvementData = [
-  // Add your involvements/extracurriculars here if any
+  {
+    _id: "1",
+    involvementTitle: "Microsoft Certified: Power BI Data Analyst Associate",
+    involvementLink: "microsoft-power-bi-certification",
+    involvementSubTitle: "Microsoft",
+    involvementTimeline: "Aug 2025 – Aug 2026",
+    involvementTagline: "Professional certification in Power BI data analysis and visualization",
+    involvementDescription: "Certified in Power BI for advanced data analysis, visualization, and business intelligence solutions. Valid until August 2026.",
+    involvementParagraphs: [
+      "Microsoft Certified: Power BI Data Analyst Associate certification demonstrates expertise in transforming data into actionable insights using Power BI.",
+      "Covers advanced data modeling, visualization, and dashboard creation for business intelligence solutions.",
+      "Certification valid from August 2025 to August 2026."
+    ],
+    involvementImagePath: "certifications/microsoft-power-bi",
+    involvementYear: "2025"
+  },
+  {
+    _id: "2",
+    involvementTitle: "SQL (Advanced) – HackerRank",
+    involvementLink: "hackerrank-sql-advanced",
+    involvementSubTitle: "HackerRank",
+    involvementTimeline: "2025",
+    involvementTagline: "Advanced SQL skills certification from HackerRank",
+    involvementDescription: "Achieved HackerRank certification in advanced SQL programming, demonstrating proficiency in complex queries, optimization, and database management.",
+    involvementParagraphs: [
+      "HackerRank SQL (Advanced) certification validates expertise in complex SQL queries, optimization techniques, and database management.",
+      "Demonstrates proficiency in advanced SQL concepts including window functions, CTEs, and query optimization.",
+      "Recognized credential for database and data engineering roles."
+    ],
+    involvementImagePath: "certifications/hackerrank-sql",
+    involvementYear: "2025"
+  },
+  {
+    _id: "3",
+    involvementTitle: "AWS Cloud Technical Essentials",
+    involvementLink: "aws-cloud-technical-essentials",
+    involvementSubTitle: "Amazon Web Services",
+    involvementTimeline: "2025",
+    involvementTagline: "AWS foundational cloud computing certification",
+    involvementDescription: "Completed AWS Cloud Technical Essentials course, gaining foundational knowledge in cloud computing, AWS services, and cloud architecture.",
+    involvementParagraphs: [
+      "AWS Cloud Technical Essentials certification provides foundational knowledge of AWS cloud computing services.",
+      "Covers core AWS services including EC2, S3, RDS, and cloud architecture best practices.",
+      "Essential credential for cloud engineering and AWS deployment roles."
+    ],
+    involvementImagePath: "certifications/aws-cloud-essentials",
+    involvementYear: "2025"
+  }
 ];
 
 export const educationData = [
@@ -243,15 +328,14 @@ export const educationData = [
 export const skillsData = {
   languages: [
     { name: "Python", level: 95 }, // Core expertise: Research, data engineering, AI projects
-    { name: "SQL", level: 95 }, // Professional use: PostgreSQL pipelines, data quality 99.9%
+    { name: "SQL", level: 95 }, // Professional use: PostgreSQL pipelines, data quality 99.9%, 400 coding hours
     { name: "JavaScript", level: 90 }, // React.js projects, dashboards
     { name: "Java", level: 85 }, // Listed in skills, good foundation
     { name: "C++", level: 80 }, // Listed in skills
     { name: "HTML/CSS", level: 90 }, // Frontend development experience
     { name: "PHP", level: 75 }, // Listed but less emphasis
     { name: "Groovy", level: 70 }, // Listed but less emphasis
-    { name: "Data Structures", level: 95 }, // Strong CS background (3.9/4 GPA)
-    { name: "Algorithms", level: 95 } // Strong CS background (3.9/4 GPA)
+    { name: "Data Structures & Algorithms", level: 95 } // Strong CS background (3.9/4 GPA) - Combined
   ],
   databases: [
     { name: "PostgreSQL", level: 95 }, // Professional use: 2+ years, data pipelines, 99.9% quality
@@ -282,8 +366,8 @@ export const skillsData = {
     { name: "Agile", level: 95 }, // Professional experience, improved efficiency 30%
     { name: "Django", level: 80 }, // Listed but less emphasis
     { name: "Bootstrap", level: 85 }, // Frontend framework
-    { name: "Angular", level: 75 }, // Listed but less emphasis
-    { name: "CAD", level: 70 } // Listed but less emphasis
+    { name: "Angular", level: 75 } // Listed but less emphasis
+    // CAD removed as requested
   ],
   dataVisualization: [
     { name: "Power BI", level: 95 }, // Professional use: 2+ years, dashboards, certified
@@ -297,7 +381,7 @@ export const skillComponentsData = [
   {
     _id: "1",
     skillComponentName: "Languages",
-    skillComponentSkills: ["C++", "Java", "Python", "SQL", "HTML/CSS", "JavaScript", "PHP", "Groovy", "Data Structures", "Algorithms"],
+    skillComponentSkills: ["C++", "Java", "Python", "SQL", "HTML/CSS", "JavaScript", "PHP", "Groovy", "Data Structures & Algorithms"],
     skillComponentColor: "#fcbc1d"
   },
   {
@@ -315,7 +399,7 @@ export const skillComponentsData = [
   {
     _id: "4",
     skillComponentName: "Frameworks",
-    skillComponentSkills: ["React.js", "Node.js", "Angular", "Django", "Express.js", "Bootstrap", "Flask", "TensorFlow", "CNN", "Agile", "CAD"],
+    skillComponentSkills: ["React.js", "Node.js", "Angular", "Django", "Express.js", "Bootstrap", "Flask", "TensorFlow", "CNN", "Agile"],
     skillComponentColor: "#edeeef"
   },
   {

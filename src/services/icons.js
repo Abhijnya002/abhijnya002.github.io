@@ -34,6 +34,8 @@ import hindi from "../assets/img/icons/hindi.svg";
 import japanese from "../assets/img/icons/japanese.svg";
 import french from "../assets/img/icons/french.svg";
 import arabic from "../assets/img/icons/arabic.png";
+import github from "../assets/img/icons/github.svg";
+import dsa from "../assets/img/icons/dsa.svg";
 
 const icons = {
   javascript,
@@ -72,6 +74,8 @@ const icons = {
   japanese,
   french,
   arabic,
+  github,
+  dsa, // Data Structures & Algorithms icon
 };
 
 export default icons;
