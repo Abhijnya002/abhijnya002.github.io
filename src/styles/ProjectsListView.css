@@ -172,10 +172,11 @@
   height: 0;
   padding-bottom: 52.41%; /* 1080x566px aspect ratio (566/1080 = 0.5241) */
   position: relative;
-  border-radius: 12px; /* Match card's border-radius */
-  overflow: hidden; /* Keep image contained */
-  background-color: transparent; /* No background */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Softer shadow */
+  border-radius: 0; /* No border radius - exact match to PersonaForge card */
+  overflow: visible; /* Allow image to fill completely */
+  background: none; /* Absolutely no background */
+  background-color: transparent; /* No background color */
+  box-shadow: none; /* No shadow on image container */
 }
 
 .project-image img {
@@ -184,16 +185,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Show full image without cropping */
+  object-fit: cover; /* Fill container completely - match PersonaForge */
   object-position: center; /* Center the image */
-  border-radius: 12px;
+  border-radius: 0; /* No border radius */
 }
 
 .project-image[style*="background-image"] {
-  background-size: contain !important; /* Show full image without cropping */
+  background-size: cover !important; /* Fill container completely - match PersonaForge */
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-color: transparent !important; /* No background */
+  background-color: transparent !important; /* Absolutely no background */
+  border-radius: 0 !important; /* No border radius */
 }
 
 .learn-button-motioned {
@@ -224,7 +226,7 @@
     width: 100%;
     min-width: 280px;
     max-width: 350px;
-    padding-bottom: 65%; /* Maintain aspect ratio */
+    padding-bottom: 52.41%; /* Maintain 1080x566px aspect ratio */
   }
 }
 
@@ -247,7 +249,7 @@
     max-width: 100%;
     min-width: auto;
     height: 0;
-    padding-bottom: 62.5%; /* Maintain 5:8 aspect ratio */
+    padding-bottom: 52.41%; /* Maintain 1080x566px aspect ratio */
   }
 }
 
@@ -263,7 +265,7 @@
     max-width: 100%;
     min-width: auto;
     height: 0;
-    padding-bottom: 62.5%; /* Maintain 5:8 aspect ratio */
+    padding-bottom: 52.41%; /* Maintain 1080x566px aspect ratio */
     margin: 20px 0 0;
   }
 }
