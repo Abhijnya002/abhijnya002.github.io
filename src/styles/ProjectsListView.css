@@ -41,7 +41,7 @@
 
 /* Each project card: sticky positioning for stacking effect */
 .project-card {
-  max-width: 1140px;
+  max-width: 1100px; /* Slightly smaller max-width - matching Kartavya's card size */
   /* scroll-snap-align: center;
     scroll-snap-stop: always; */
   display: flex;
@@ -49,9 +49,9 @@
   top: 0px;
   z-index: 10;
   flex-direction: row;
-  width: min(1140px, 95%);
+  width: min(1100px, 95%); /* Matching Kartavya's card width */
   text-align: left;
-  padding: 0 40px;
+  padding: 0 35px; /* Slightly reduced padding for better proportions */
   margin: 20px;
   /* margin-bottom: 5px !important; */
   backdrop-filter: blur(10px);
@@ -107,10 +107,10 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   } */
 
-/* Project card content layout (unchanged)... */
+/* Project card content layout - matching Kartavya's proportions */
 .project-info {
-  flex: 3; /* Take up more space for text */
-  padding: 40px 40px 40px 0px;
+  flex: 2.5; /* Balanced with image section - matching Kartavya's style */
+  padding: 30px 30px 30px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -165,12 +165,12 @@
 
 .project-image {
   margin: 20px 0px 20px 20px;
-  flex: 1; /* Smaller flex ratio for image - matching Kartavya's style */
-  min-width: 280px; /* Smaller minimum width */
-  max-width: 360px; /* Smaller maximum width - more compact like Kartavya's */
+  flex: 1.2; /* Slightly larger flex ratio - matching Kartavya's balanced layout */
+  min-width: 300px; /* Minimum width for good visibility */
+  max-width: 400px; /* Maximum width - matching Kartavya's proportions */
   width: 100%;
   height: 0;
-  padding-bottom: 62.5%; /* 5:8 aspect ratio for more compact landscape images */
+  padding-bottom: 65%; /* Aspect ratio matching Kartavya's image proportions */
   position: relative;
   border-radius: 12px; /* Match card's border-radius */
   overflow: hidden; /* Keep image contained */
@@ -214,17 +214,17 @@
   }
 
   .project-info {
-    padding: 30px 30px 30px 0px;
-    flex: 1;
+    padding: 25px 25px 25px 0px;
+    flex: 2.5;
   }
 
   .project-image {
-    flex: 1; /* Prevent flex shrink issues */
+    flex: 1.2; /* Maintain flex ratio */
     margin: 20px 0 20px 20px;
     width: 100%;
-    min-width: 240px;
-    max-width: 300px;
-    padding-bottom: 62.5%; /* Maintain 5:8 aspect ratio */
+    min-width: 280px;
+    max-width: 350px;
+    padding-bottom: 65%; /* Maintain aspect ratio */
   }
 }
 
