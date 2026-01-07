@@ -100,24 +100,6 @@ export const projectsData = [
 
 export const experienceData = [
   {
-    _id: "1",
-    experienceTitle: "Graduate Research Assistant",
-    experienceLink: "graduate-research-assistant-syracuse",
-    experienceCompany: "Syracuse University, Maxwell School of Citizenship and Public Affairs",
-    experienceLocation: "Syracuse, NY",
-    experiencePeriod: "Sep 2025 – Present",
-    experienceDescription: "Research-focused data engineering role building scalable pipelines for large-scale public document extraction and analysis",
-    experienceHighlights: [
-      "Automated retrieval of large public document datasets using REST APIs and browser automation with pagination and rate-limit handling",
-      "Built modular Python pipelines to extract, clean, and normalize data from PDFs, including OCR-based workflows",
-      "Converted unstructured policy documents into structured, analysis-ready datasets and reports",
-      "Improved pipeline reliability and efficiency by 40% through robust error handling, logging, and incremental processing"
-    ],
-    experienceTech: ["Python", "REST APIs", "PDF Processing", "OCR", "Data Pipelines"],
-    experienceImagePath: "experienceTable/Graduate Research Assistant",
-    experienceYear: "2025-Present"
-  },
-  {
     _id: "2",
     experienceTitle: "Data Analysis Engineer",
     experienceLink: "data-analysis-engineer-mercedes",
@@ -171,6 +153,24 @@ export const experienceData = [
     experienceTech: ["Bixby", "REST APIs", "Voice Interface", "Application Development"],
     experienceImagePath: "experienceTable/Application Development Intern",
     experienceYear: "2020-2021"
+  },
+  {
+    _id: "1",
+    experienceTitle: "Graduate Research Assistant",
+    experienceLink: "graduate-research-assistant-syracuse",
+    experienceCompany: "Syracuse University, Maxwell School of Citizenship and Public Affairs",
+    experienceLocation: "Syracuse, NY",
+    experiencePeriod: "Sep 2025 – Present",
+    experienceDescription: "Research-focused data engineering role building scalable pipelines for large-scale public document extraction and analysis",
+    experienceHighlights: [
+      "Automated retrieval of large public document datasets using REST APIs and browser automation with pagination and rate-limit handling",
+      "Built modular Python pipelines to extract, clean, and normalize data from PDFs, including OCR-based workflows",
+      "Converted unstructured policy documents into structured, analysis-ready datasets and reports",
+      "Improved pipeline reliability and efficiency by 40% through robust error handling, logging, and incremental processing"
+    ],
+    experienceTech: ["Python", "REST APIs", "PDF Processing", "OCR", "Data Pipelines"],
+    experienceImagePath: "experienceTable/Graduate Research Assistant",
+    experienceYear: "2025-Present"
   }
 ];
 

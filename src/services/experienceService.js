@@ -2,6 +2,10 @@ import { experienceData } from "../data/portfolioData";
 
 // Helper function to get company logo URL based on company name
 const getCompanyLogo = (companyName) => {
+  if (!companyName) {
+    return `${process.env.PUBLIC_URL}/images/logos/default-company.png`;
+  }
+  
   const logoMap = {
     "Syracuse University": "syracuse-university",
     "Mercedes Benz Research and Development": "mercedes-benz",
@@ -9,17 +13,26 @@ const getCompanyLogo = (companyName) => {
     "Mercedes-Benz Research & Development": "mercedes-benz",
     "Mercedes-Benz Research & Development India": "mercedes-benz",
     "Samsung R&D Institute India": "samsung",
+    "Samsung R and D Institute India": "samsung",
     "Samsung": "samsung",
     "Amazon Web Services": "aws",
     "AWS": "aws"
   };
   
-  // Find matching company name (case-insensitive, partial match)
-  const normalizedCompany = companyName.toLowerCase();
+  // Normalize company name: lowercase and handle variations
+  const normalizedCompany = companyName.toLowerCase().replace(/r&d/gi, "r and d").replace(/r & d/gi, "r and d");
+  
+  // Check for exact matches first (more specific)
   for (const [key, logo] of Object.entries(logoMap)) {
-    if (normalizedCompany.includes(key.toLowerCase())) {
+    const normalizedKey = key.toLowerCase().replace(/r&d/gi, "r and d").replace(/r & d/gi, "r and d");
+    if (normalizedCompany.includes(normalizedKey) || normalizedKey.includes(normalizedCompany)) {
       return `${process.env.PUBLIC_URL}/images/logos/${logo}.png`;
     }
+  }
+  
+  // Check for "Samsung" specifically as a fallback
+  if (normalizedCompany.includes("samsung")) {
+    return `${process.env.PUBLIC_URL}/images/logos/samsung.png`;
   }
   
   // Default logo if no match
