@@ -170,10 +170,10 @@
   max-width: 400px; /* Maximum width - matching Kartavya's proportions */
   width: 100%;
   height: 0;
-  padding-bottom: 52.41%; /* 1080x566px aspect ratio (566/1080 = 0.5241) */
+  padding-bottom: 35%; /* Reduced height to match paragraph length - cropped from 52.41% */
   position: relative;
   border-radius: 0; /* No border radius - exact match to PersonaForge card */
-  overflow: visible; /* Allow image to fill completely */
+  overflow: hidden; /* Crop image to fit container */
   background: none; /* Absolutely no background */
   background-color: transparent; /* No background color */
   box-shadow: none; /* No shadow on image container */
@@ -226,7 +226,7 @@
     width: 100%;
     min-width: 280px;
     max-width: 350px;
-    padding-bottom: 52.41%; /* Maintain 1080x566px aspect ratio */
+    padding-bottom: 35%; /* Reduced height to match paragraph */
   }
 }
 
@@ -249,7 +249,7 @@
     max-width: 100%;
     min-width: auto;
     height: 0;
-    padding-bottom: 52.41%; /* Maintain 1080x566px aspect ratio */
+    padding-bottom: 35%; /* Reduced height to match paragraph */
   }
 }
 
@@ -265,7 +265,7 @@
     max-width: 100%;
     min-width: auto;
     height: 0;
-    padding-bottom: 52.41%; /* Maintain 1080x566px aspect ratio */
+    padding-bottom: 35%; /* Reduced height to match paragraph */
     margin: 20px 0 0;
   }
 }
