@@ -38,11 +38,12 @@ import github from "../assets/img/icons/github.svg";
 import dsa from "../assets/img/icons/dsa.svg";
 import html from "../assets/img/icons/html.svg";
 import django from "../assets/img/icons/django.svg";
-import postgresql from "../assets/img/icons/postgresql.svg";
-import mysql from "../assets/img/icons/mysql.svg";
-import dynamodb from "../assets/img/icons/dynamodb.svg";
-import docker from "../assets/img/icons/docker.svg";
-import aws from "../assets/img/icons/aws.svg";
+// Icon files will be imported when they're added:
+// import postgresql from "../assets/img/icons/postgresql.svg";
+// import mysql from "../assets/img/icons/mysql.svg";
+// import dynamodb from "../assets/img/icons/dynamodb.svg";
+// import docker from "../assets/img/icons/docker.svg";
+// import aws from "../assets/img/icons/aws.svg";
 
 // Note: The following icons still need to be added to src/assets/img/icons/:
 // - kubernetes.svg (Kubernetes logo)
@@ -96,13 +97,12 @@ const icons = {
   dsa,
   html,
   django,
-  // New icons - using actual icon files
-  postgresql,
-  mysql,
-  dynamodb,
-  docker,
-  aws,
-  // Temporary fallbacks until icon files are added
+  // Temporary fallbacks until icon files are added (uncomment imports above when files are added)
+  postgresql: sql, // Will use PostgreSQL icon when postgresql.svg is added
+  mysql: sql, // Will use MySQL icon when mysql.svg is added
+  dynamodb: mongodb, // Will use DynamoDB icon when dynamodb.svg is added
+  docker: linux, // Will use Docker icon when docker.svg is added
+  aws: linux, // Will use AWS icon when aws.svg is added
   kubernetes: linux, // Will use Kubernetes icon when added
   jenkins: javascript, // Will use Jenkins icon when added
   vscode: javascript, // Will use VS Code icon when added
