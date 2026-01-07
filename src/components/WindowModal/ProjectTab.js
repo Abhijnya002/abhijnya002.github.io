@@ -12,7 +12,8 @@ const ProjectTab = ({ data, isBatterySavingOn }) => {
     if (!urls) return null; // Check if URLs exist
 
     return Object.entries(urls).map(([key, value]) => {
-      const iconName = getIconForLink(value);
+      // Use the key to determine icon type: 'github' -> github icon, 'demo' -> web icon
+      const iconName = getIconForLink(key, value);
       return (
         <motion.a
           key={key}
@@ -27,7 +28,7 @@ const ProjectTab = ({ data, isBatterySavingOn }) => {
             isBatterySavingOn
               ? {}
               : {
-                  delay: 1.7 + 0.4 * key,
+                  delay: 1.7 + 0.4 * Object.keys(urls).indexOf(key),
                   type: "ease",
                 }
           }
@@ -35,7 +36,7 @@ const ProjectTab = ({ data, isBatterySavingOn }) => {
         >
           <motion.img
             src={`${iconName}`}
-            alt={`${iconName} logo`}
+            alt={`${key} logo`}
             className="project-window-logo"
             whileHover={
               isBatterySavingOn
@@ -67,11 +68,15 @@ const ProjectTab = ({ data, isBatterySavingOn }) => {
     });
   };
 
-  const getIconForLink = (link) => {
+  const getIconForLink = (key, link) => {
+    // Use the key to determine icon: 'github' -> github icon, 'demo' -> web icon
+    if (key === "github") return github;
+    if (key === "demo") return web;
+    // Fallback: check the link itself
     if (link.includes("github")) return github;
     if (link.includes("youtube") || link.includes("youtu")) return youtube;
     if (link.includes("devpost")) return devpost;
-    return web;
+    return web; // Default to web icon for demo links
   };
 
   return (
