@@ -57,21 +57,19 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
         <div className="about-content glass">
           <h2 className="section-title">ABOUT ME</h2>
           <div className="about-container">
-            <motion.div className="about-row">
-              <motion.img
-                src={`${process.env.PUBLIC_URL}/Abhijnya-Profile-Photo.webp`}
-                className="about-image"
-                alt="Profile"
-                loading="lazy"
-                variants={isBatterySavingOn ? {} : fadeIn("right", 200, 0)}
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
-                initial="hidden"
-                whileInView="show"
-                exit="hidden"
-              />
-            </motion.div>
-            <motion.div className="about-row">
+            <motion.img
+              src={`${process.env.PUBLIC_URL}/Abhijnya-Profile-Photo.webp`}
+              className="about-image"
+              alt="Profile"
+              loading="lazy"
+              variants={isBatterySavingOn ? {} : fadeIn("right", 200, 0)}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+            />
+            <motion.div className="about-details-wrapper">
               <motion.div
                 className="about-description-box"
                 variants={isBatterySavingOn ? {} : fadeIn("left", 200, 0)}

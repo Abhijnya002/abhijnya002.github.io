@@ -5,21 +5,15 @@ import { styled, keyframes } from "@stitches/react";
 import "../../styles/ProjectPage.css";
 import GradientBG from "./GradientBG"; // Adjust the path as necessary
 import ProjectsListView from "./ProjectsListView";
-import { SpotlightBG } from "../AboutPage/SpotlightBG";
 
 function ProjectPage({ addTab, isBatterySavingOn, isWindowModalVisible }) {
   const [showFeatured, setShowFeatured] = useState(false);
-  const sectionRef = React.useRef(null);
   
   return (
     <motion.section 
-      ref={sectionRef}
       className="project-page-container" 
       id="projects"
     >
-      <div className="project-bg-wrapper">
-        <SpotlightBG />
-      </div>
       <motion.div
         className="project-page-div"
         style={

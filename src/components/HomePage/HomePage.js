@@ -118,19 +118,6 @@ function HomePage({ isBatterySavingOn, scrolled, addTab }) {
                 Abhijnya Konanduru Gurumurthy
               </motion.h1>
 
-              {/* Profile Image */}
-              <motion.img
-                src={`${process.env.PUBLIC_URL}/Abhijnya-Profile-Photo.webp`}
-                className="home-profile-image"
-                alt="Profile"
-                loading="lazy"
-                variants={isBatterySavingOn ? {} : zoomIn(0)}
-                initial="hidden"
-                animate="show"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              />
-
               {/* Changing Text Animation */}
               <motion.div
                 className="changing-text-container"
