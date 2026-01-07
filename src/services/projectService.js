@@ -6,9 +6,24 @@ const transformProjectImages = (project) => {
   let projectImages = project.projectImages;
   if (!projectImages || !Array.isArray(projectImages)) {
     const imagePath = project.projectImagePath || "";
-    const imageUrl = imagePath 
-      ? `${process.env.PUBLIC_URL}/images/${imagePath}.webp`
-      : `${process.env.PUBLIC_URL}/images/default-project.webp`;
+    let imageUrl;
+    if (imagePath) {
+      // Encode spaces and special characters in the image path
+      const encodedPath = encodeURIComponent(imagePath + ".webp").replace(/%2F/g, "/");
+      imageUrl = `${process.env.PUBLIC_URL}/images/${imagePath}.webp`;
+      // Try with encoded filename if spaces exist
+      if (imagePath.includes(" ")) {
+        const pathParts = imagePath.split("/");
+        const fileName = pathParts[pathParts.length - 1];
+        const directory = pathParts.slice(0, -1).join("/");
+        const encodedFileName = encodeURIComponent(fileName + ".webp");
+        imageUrl = directory 
+          ? `${process.env.PUBLIC_URL}/images/${directory}/${encodedFileName}`
+          : `${process.env.PUBLIC_URL}/images/${encodedFileName}`;
+      }
+    } else {
+      imageUrl = `${process.env.PUBLIC_URL}/images/default-project.webp`;
+    }
     projectImages = [imageUrl];
   }
   

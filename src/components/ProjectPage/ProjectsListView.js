@@ -385,7 +385,7 @@ function ProjectsListView({ addTab, isBatterySavingOn, showFeatured }) {
                   <div
                     className="project-image"
                     style={{
-                      backgroundImage: `url(${project.projectImages && project.projectImages[0] ? project.projectImages[0] : `${process.env.PUBLIC_URL}/images/default-project.webp`})`,
+                      backgroundImage: `url('${project.projectImages && project.projectImages[0] ? project.projectImages[0].replace(/'/g, "%27") : `${process.env.PUBLIC_URL}/images/default-project.webp`}')`,
                     }}
                   ></div>
                 </div>
