@@ -66,3 +66,4 @@ All icons should be in SVG format for best quality and scalability. Place them i
 
 After adding icons, update `src/services/icons.js` to import and use them instead of the fallback icons.
 
+

@@ -115,7 +115,7 @@ const HonorsTabPage = ({ addTab, isBatterySavingOn }) => {
       exit="hidden"
       viewport={{ once: true }}
     >
-      <h1 className="career-tab-header">My Honors Journey</h1>
+      <h1 className="career-tab-header">My Achievements</h1>
       <div className="career-tabs-slider">
         {/* Slide container with advanced drag support */}
         <motion.div

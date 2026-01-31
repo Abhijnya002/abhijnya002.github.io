@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 // Speech input removed - frontend-only mode
 import { styled } from "@stitches/react";
-import { TypeAnimation } from "react-type-animation";
 // import { Parallax } from "react-parallax";
 // useSpring and animated removed - no longer needed
 import {
@@ -9,14 +8,12 @@ import {
   AnimatePresence,
   useScroll,
   useTransform,
-  delay,
 } from "framer-motion";
 import { zoomIn } from "../../services/variants";
 import "../../styles/HomePage.css";
 // import ProfilePhoto from `${process.env.PUBLIC_URL}/Kartavya.webp`;
 
 function HomePage({ isBatterySavingOn, scrolled, addTab }) {
-  const [key, setKey] = useState(0); // State to reset the animation on click
   const HomeBGRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: HomeBGRef,
@@ -30,10 +27,7 @@ function HomePage({ isBatterySavingOn, scrolled, addTab }) {
   const scale = useTransform(scrollYProgress, [0, 0.1, 1], [1.01, 1.01, 1.6]);
   // const opacity = useTransform(scrollYProgress, [0.25, 1], [1, 1]);
 
-  const keywords = [
-    "Building intelligent data systems that turn complexity into clarity.",
-    "From scalable data pipelines to AI-driven analytics and real-time insights.",
-  ];
+  const tagline = "From raw data to real-time intelligence, I build scalable pipelines and AI-powered systems,\ncertified as an AWS AI Practitioner.";
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -118,36 +112,15 @@ function HomePage({ isBatterySavingOn, scrolled, addTab }) {
                 Abhijnya Konanduru Gurumurthy
               </motion.h1>
 
-              {/* Changing Text Animation */}
+              {/* Static Tagline */}
               <motion.div
                 className="changing-text-container"
-                onClick={() => setKey((prevKey) => prevKey + 1)}
                 variants={isBatterySavingOn ? {} : zoomIn(0)}
                 initial="hidden"
                 animate="show"
               >
                 <em>
-                  <span className="changing-text">
-                    <TypeAnimation
-                      key={key} // Forces the component to re-render on click
-                      className="changing-text-animation"
-                      sequence={[
-                        1500,
-                        keywords[0],
-                        500,
-                        "\n",
-                        100,
-                        keywords[1],
-                        3000,
-                        `${keywords[0]}\n${keywords[1]}`, // Display both lines together permanently
-                      ]}
-                      speed={{ type: "keyStrokeDelayInMs", value: 17 }} // Fast typing
-                      deletionSpeed={{ type: "keyStrokeDelayInMs", value: 8 }}
-                      // delay={1000}
-                      repeat={0} // No repeat
-                      cursor={true}
-                    />
-                  </span>
+                  <span className="changing-text">{tagline}</span>
                 </em>
               </motion.div>
 

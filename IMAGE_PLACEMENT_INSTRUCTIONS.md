@@ -15,3 +15,4 @@
 - Make sure the BMS logo is in PNG format
 - The Medical NER image should ideally be in WebP format for optimal performance, but PNG/JPG will also work
 
+

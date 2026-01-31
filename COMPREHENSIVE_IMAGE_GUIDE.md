@@ -134,3 +134,4 @@ After adding images, check:
 - [ ] BMS logo displays in the Education section
 - [ ] Images load quickly and look good on mobile devices
 
+

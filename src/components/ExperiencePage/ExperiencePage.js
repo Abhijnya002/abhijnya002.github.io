@@ -28,14 +28,12 @@ const tabs = [
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
-  const offset = 52; // Adjust based on your navbar height
-  const elementPosition = element.getBoundingClientRect().top;
-  const offsetPosition = elementPosition + window.scrollY - offset;
-
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: "smooth",
-  });
+  if (element) {
+    const offset = 52;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - offset;
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+  }
 };
 
 const tabHighlightVariants = {
@@ -64,10 +62,7 @@ const ExperiencePage = ({
   isBatterySavingOn,
   isWindowModalVisible,
 }) => {
-  const [selectedTab, setSelectedTab] = useState(tabs[1]); // Default tab is "Career"
-  const [ActiveComponent, setActiveComponent] = useState(
-    () => selectedTab.component
-  );
+  const [selectedTab, setSelectedTab] = useState(tabs[1]); // Default tab is "Career" - used for scroll highlight
 
   useEffect(() => {
     const updateScale = () => {
@@ -130,8 +125,7 @@ const ExperiencePage = ({
                   }`}
                   onClick={() => {
                     setSelectedTab(tab);
-                    setActiveComponent(() => tab.component);
-                    scrollToSection("experience");
+                    scrollToSection(`experience-${tab.title.toLowerCase()}`);
                   }}
                   whileInView={
                     isBatterySavingOn ? {} : { opacity: 1, scale: 1 }
@@ -153,17 +147,22 @@ const ExperiencePage = ({
               ))}
             </motion.div>
             <motion.div
-              className="content-container"
+              className="content-container content-container-stacked"
               variants={isBatterySavingOn ? {} : zoomIn(0)}
               initial="hidden"
               animate="show"
               exit="hidden"
               viewport={{ once: true }}
             >
-              <ActiveComponent
-                addTab={addTab}
-                isBatterySavingOn={isBatterySavingOn}
-              />
+              <section id="experience-certification" className="experience-section">
+                <InvolvementTabPage addTab={addTab} isBatterySavingOn={isBatterySavingOn} />
+              </section>
+              <section id="experience-career" className="experience-section">
+                <CareerTabPage addTab={addTab} isBatterySavingOn={isBatterySavingOn} />
+              </section>
+              <section id="experience-honors" className="experience-section">
+                <HonorsTabPage addTab={addTab} isBatterySavingOn={isBatterySavingOn} />
+              </section>
             </motion.div>
           </motion.div>
         </section>

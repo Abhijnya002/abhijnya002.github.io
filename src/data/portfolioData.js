@@ -206,6 +206,22 @@ export const honorsExperienceData = [
 
 export const involvementData = [
   {
+    _id: "0",
+    involvementTitle: "AWS Certified AI Practitioner",
+    involvementLink: "aws-certified-ai-practitioner",
+    involvementSubTitle: "Amazon Web Services",
+    involvementTimeline: "2025",
+    involvementTagline: "AWS AI Practitioner certification for building and deploying AI solutions",
+    involvementDescription: "AWS Certified AI Practitioner certification demonstrates expertise in building, deploying, and maintaining AI solutions on AWS. Validates foundational knowledge of AI/ML concepts and AWS services for AI workloads.",
+    involvementParagraphs: [
+      "AWS Certified AI Practitioner certification validates expertise in AI and machine learning on AWS.",
+      "Covers AI/ML concepts, model deployment, and AWS AI services including Amazon SageMaker.",
+      "Recognized credential for AI and data engineering roles in the cloud.",
+    ],
+    involvementImagePath: "certifications/aws-ai-practitioner",
+    involvementYear: "2025"
+  },
+  {
     _id: "1",
     involvementTitle: "Microsoft Certified: Power BI Data Analyst Associate",
     involvementLink: "microsoft-power-bi-certification",

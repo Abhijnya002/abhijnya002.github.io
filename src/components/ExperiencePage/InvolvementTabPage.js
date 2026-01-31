@@ -60,7 +60,7 @@ const InvolvementTabPage = ({ addTab, isBatterySavingOn }) => {
     const getInvolvements = async () => {
       try {
         const data = await fetchInvolvements();
-        setInvolvements([...data.reverse()]);
+        setInvolvements(data);
       } catch (error) {
         console.error("Error fetching involvements:", error);
       }
