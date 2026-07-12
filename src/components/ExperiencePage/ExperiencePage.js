@@ -26,43 +26,12 @@ const tabs = [
   },
 ];
 
-const scrollToSection = (id) => {
-  const element = document.getElementById(id);
-  if (element) {
-    const offset = 52;
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.scrollY - offset;
-    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-  }
-};
-
-const tabHighlightVariants = {
-  initial: (currentIndex) => ({
-    x: `${currentIndex * 12}px`,
-    width: 0,
-    opacity: 0,
-    scale: 0,
-    transition: { duration: 0.3 },
-  }),
-  animate: (targetIndex) => ({
-    x: `${targetIndex * 120}px`,
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 500,
-      damping: 40,
-      duration: 0.3,
-    },
-  }),
-};
-
 const ExperiencePage = ({
   addTab,
   isBatterySavingOn,
   isWindowModalVisible,
 }) => {
-  const [selectedTab, setSelectedTab] = useState(tabs[1]); // Default tab is "Career" - used for scroll highlight
+  const [selectedTab, setSelectedTab] = useState(tabs[1]); // Default tab is "Career"
 
   useEffect(() => {
     const updateScale = () => {
@@ -83,6 +52,8 @@ const ExperiencePage = ({
     window.addEventListener("resize", updateScale);
     return () => window.removeEventListener("resize", updateScale);
   }, []);
+
+  const SelectedComponent = selectedTab.component;
 
   return (
     <>
@@ -109,24 +80,14 @@ const ExperiencePage = ({
               exit="hidden"
               viewport={{ once: true }}
             >
-              <motion.div
-                className="tab-highlight"
-                key={`tab-${selectedTab}`}
-                custom={tabs.indexOf(selectedTab)}
-                // variants={tabHighlightVariants}
-                // animate="animate"
-                // initial="initial"
-              />
+              <motion.div className="tab-highlight" key={`tab-${selectedTab.title}`} />
               {tabs.map((tab) => (
                 <motion.button
                   key={tab.title}
                   className={`tab-button${
                     selectedTab.title === tab.title ? " active" : ""
                   }`}
-                  onClick={() => {
-                    setSelectedTab(tab);
-                    scrollToSection(`experience-${tab.title.toLowerCase()}`);
-                  }}
+                  onClick={() => setSelectedTab(tab)}
                   whileInView={
                     isBatterySavingOn ? {} : { opacity: 1, scale: 1 }
                   }
@@ -146,23 +107,22 @@ const ExperiencePage = ({
                 </motion.button>
               ))}
             </motion.div>
-            <motion.div
-              className="content-container content-container-stacked"
-              variants={isBatterySavingOn ? {} : zoomIn(0)}
-              initial="hidden"
-              animate="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
-              <section id="experience-certification" className="experience-section">
-                <InvolvementTabPage addTab={addTab} isBatterySavingOn={isBatterySavingOn} />
-              </section>
-              <section id="experience-career" className="experience-section">
-                <CareerTabPage addTab={addTab} isBatterySavingOn={isBatterySavingOn} />
-              </section>
-              <section id="experience-honors" className="experience-section">
-                <HonorsTabPage addTab={addTab} isBatterySavingOn={isBatterySavingOn} />
-              </section>
+            <motion.div className="content-container">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={selectedTab.title}
+                  variants={isBatterySavingOn ? {} : zoomIn(0)}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  style={{ width: "100%", height: "100%" }}
+                >
+                  <SelectedComponent
+                    addTab={addTab}
+                    isBatterySavingOn={isBatterySavingOn}
+                  />
+                </motion.div>
+              </AnimatePresence>
             </motion.div>
           </motion.div>
         </section>

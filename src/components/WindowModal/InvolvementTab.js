@@ -146,7 +146,7 @@ const InvolvementTab = ({ data, isBatterySavingOn }) => {
             </motion.h4>
           )}
 
-          {data.involvementURLs.length > 0 && (
+          {data.involvementURLs && data.involvementURLs.length > 0 && (
             <motion.div
               className="project-window-urls"
               initial={isBatterySavingOn ? {} : { opacity: 0, scale: 0 }}

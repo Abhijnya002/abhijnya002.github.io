@@ -2,24 +2,44 @@
 
 export const projectsData = [
   {
-    _id: "4",
-    projectTitle: "AI-Powered Data Extraction & Structuring",
-    projectLink: "ai-powered-data-extraction",
-    projectDescription: "Built an LLM-powered pipeline to transform unstructured renovation meeting transcripts into structured, actionable Scope of Work data. Used Flan-T5 and DistilBART-CNN to extract tasks, generate concise titles and summaries, categorize work items, and map informal budget mentions into standardized formats. Enabled scalable export to formatted Excel reports using OpenPyXL, reducing manual review time and improving documentation accuracy.",
-    projectTech: ["Python", "Flask", "LLM", "Flan-T5", "DistilBART-CNN", "React", "Tailwind CSS", "OpenPyXL"],
+    _id: "7",
+    projectTitle: "Agentic Document Understanding Platform",
+    projectLink: "agentic-document-understanding-platform",
+    projectDescription: "An end-to-end agentic document understanding system that turns scanned/historical documents into structured knowledge. Built with LangChain and LangGraph, it orchestrates a multi-step StateGraph pipeline chaining OCR, LLM-based NER, focused summarization, and subject–relation–object knowledge-triple extraction. An integrated LLM-as-a-Judge stage scores hallucination, bias, and faithfulness, enabling continuous quality monitoring in production. The modular, cloud-ready design lets the OCR layer be swapped for multimodal vision models and the workflow be served via FastAPI.",
+    projectTech: ["Python", "LangChain", "LangGraph", "LLM APIs", "Hugging Face Transformers", "pytesseract", "FastAPI"],
     projectHighlights: [
-      "AI system that converts unstructured renovation transcripts into structured Excel-based Scope of Work reports",
-      "Used Flan-T5 and DistilBART-CNN for task extraction and summarization",
-      "Scalable export to formatted Excel reports using OpenPyXL",
-      "Reduced manual review time and improved documentation accuracy"
+      "Agentic multi-step LangGraph StateGraph pipeline chaining OCR, NER, summarization, and knowledge-triple extraction",
+      "LLM-based NER, focused summarization, and subject–relation–object knowledge extraction over noisy OCR text",
+      "LLM-as-a-Judge evaluation scoring hallucination, bias, and faithfulness for continuous production monitoring",
+      "Modular, cloud-ready design — OCR swappable for multimodal vision models and workflow servable via FastAPI"
     ],
-    projectGitHubLink: "https://github.com/Abhijnya002/AI-powered-data-extracter",
-    projectDemoLink: "https://ai-powered-data-extracter.vercel.app/",
-    projectImagePath: "projectTable/AI-Powered Data Extraction & Structuring",
+    projectGitHubLink: "",
+    projectDemoLink: "",
+    projectImagePath: "projectTable/Agentic Document Understanding Platform",
     projectYear: "2025",
-    projectPeriod: "Feb 2025 – Apr 2025",
+    projectPeriod: "2025",
     featured: true,
-    displayOrder: 1
+    displayOrder: 6
+  },
+  {
+    _id: "6",
+    projectTitle: "Issue Tracking System",
+    projectLink: "issue-tracking-system",
+    projectDescription: "A Jira-style issue tracking app built to organize work by project. Features a drag-and-drop board with a backlog, issues with coloured per-project tags, comments, and SQL-backed reports. Projects use short keys (e.g. PROJ) so issues read PROJ-1, PROJ-2. Includes full authentication with password reset, and team collaboration where project admins add members by email with admin, member, or viewer roles.",
+    projectTech: ["Ruby on Rails", "PostgreSQL", "Tailwind CSS", "Alpine.js", "Hotwire", "SortableJS"],
+    projectHighlights: [
+      "Jira-style board with drag-and-drop issue tracking, backlog, and per-project coloured tags",
+      "Full authentication with sign up, sign in, and password reset",
+      "Team collaboration with role-based access (admin, member, viewer) managed by email",
+      "SQL-backed reporting and comments, built with Rails 8, Hotwire (Turbo + Stimulus), and SortableJS"
+    ],
+    projectGitHubLink: "",
+    projectDemoLink: "",
+    projectImagePath: "projectTable/Issue Tracking System",
+    projectYear: "2026",
+    projectPeriod: "2026",
+    featured: true,
+    displayOrder: 5
   },
   {
     _id: "1",
@@ -39,7 +59,7 @@ export const projectsData = [
     projectYear: "2025",
     projectPeriod: "Oct 2025 – Nov 2025",
     featured: true,
-    displayOrder: 2
+    displayOrder: 4
   },
   {
     _id: "5",
@@ -79,7 +99,7 @@ export const projectsData = [
     projectYear: "2025",
     projectPeriod: "Aug 2025 – Sep 2025",
     featured: true,
-    displayOrder: 4
+    displayOrder: 2
   },
   {
     _id: "2",
@@ -99,7 +119,7 @@ export const projectsData = [
     projectYear: "2025",
     projectPeriod: "Feb 2025 – Apr 2025",
     featured: true,
-    displayOrder: 5
+    displayOrder: 1
   }
 ];
 
@@ -278,8 +298,8 @@ export const educationData = [
     institution: "Syracuse University",
     location: "Syracuse, NY",
     period: "Aug 2024 - May 2026",
-    gpa: "3.90/4.0",
-    description: "Pursuing Master's degree in Computer Science with a focus on data engineering, machine learning, and full-stack development. Maintaining a GPA of 3.90/4.0 while working as a Graduate Research Assistant, conducting research in data-driven policy analysis and automated data processing pipelines."
+    gpa: "3.93/4.0",
+    description: "Pursuing Master's degree in Computer Science with a focus on data engineering, machine learning, and full-stack development. Maintaining a GPA of 3.93/4.0 while working as a Graduate Research Assistant, conducting research in data-driven policy analysis and automated data processing pipelines."
   },
   {
     _id: "2",
@@ -293,6 +313,18 @@ export const educationData = [
 ];
 
 export const skillsData = {
+  aiMl: [
+    { name: "Machine Learning", level: 90 },
+    { name: "Deep Learning", level: 88 },
+    { name: "PyTorch", level: 88 },
+    { name: "TensorFlow", level: 90 },
+    { name: "NLP", level: 88 },
+    { name: "LLMs", level: 88 },
+    { name: "Transformers", level: 85 },
+    { name: "scikit-learn", level: 90 },
+    { name: "Pandas", level: 92 },
+    { name: "NumPy", level: 92 }
+  ],
   languages: [
     { name: "Python", level: 95 }, // Core expertise: Research, data engineering, AI projects
     { name: "SQL", level: 95 }, // Professional use: PostgreSQL pipelines, data quality 99.9%, 400 coding hours
@@ -345,6 +377,12 @@ export const skillsData = {
 };
 
 export const skillComponentsData = [
+  {
+    _id: "0",
+    skillComponentName: "AI & ML",
+    skillComponentSkills: ["Machine Learning", "Deep Learning", "PyTorch", "TensorFlow", "NLP", "LLMs", "Transformers", "scikit-learn", "Pandas", "NumPy"],
+    skillComponentColor: "#fcbc1d"
+  },
   {
     _id: "1",
     skillComponentName: "Languages",

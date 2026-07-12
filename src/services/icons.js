@@ -54,6 +54,10 @@ import php from "../assets/img/icons/php.svg";
 // import grafana from "../assets/img/icons/grafana.svg";
 import r from "../assets/img/icons/r.svg";
 import agile from "../assets/img/icons/agile.svg";
+import machinelearning from "../assets/img/icons/machinelearning.svg";
+import deeplearning from "../assets/img/icons/deeplearning.svg";
+import pandas from "../assets/img/icons/pandas.svg";
+import numpy from "../assets/img/icons/numpy.svg";
 
 const icons = {
   javascript,
@@ -110,7 +114,11 @@ const icons = {
   git: github, // Git icon not added yet, using GitHub as fallback
   grafana: tableau, // Grafana SVG has style tag issues - using Tableau icon as fallback
   r,
-  agile
+  agile,
+  machinelearning,
+  deeplearning,
+  pandas,
+  numpy
 };
 
 export default icons;

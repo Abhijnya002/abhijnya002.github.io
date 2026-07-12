@@ -11,6 +11,17 @@ const levelToProficiency = (level) => {
 // Uses available icons from icons.js, falls back to similar icons
 const getSkillLogo = (skillName) => {
   const logoMap = {
+    // AI & ML
+    "Machine Learning": "machinelearning",
+    "Deep Learning": "deeplearning",
+    "PyTorch": "deeplearning",
+    "NLP": "machinelearning",
+    "LLMs": "deeplearning",
+    "Transformers": "machinelearning",
+    "scikit-learn": "sklearn",
+    "Pandas": "pandas",
+    "NumPy": "numpy",
+
     // Languages
     "Python": "python",
     "SQL": "sql",
@@ -70,6 +81,10 @@ const getSkillLogo = (skillName) => {
 // Transform skillsData object into array format expected by SkillSection
 export const fetchSkills = async () => {
       const categoryMap = {
+        aiMl: {
+          title: "AI & ML",
+          description: "Artificial intelligence and machine learning technologies I work with"
+        },
         languages: {
           title: "Languages",
           description: "Programming languages I work with"
